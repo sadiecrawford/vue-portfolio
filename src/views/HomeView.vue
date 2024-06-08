@@ -4,11 +4,6 @@ import HorizontalBox from '../components/HorizontalBox.vue'
 import SimpleLink from '../components/SimpleLink.vue'
 import PortfolioSection from '../components/portfolio_elements/PortfolioSection.vue'
 import PortfolioPreview from '../components/portfolio_elements/PortfolioPreview.vue'
-
-import img_UnmaskedPreview from '@/assets/images/portfolio/games/unmasked/UnmaskedPreview.png'
-import img_HushPreview from '@/assets/images/portfolio/games/hush/HushPreview.png'
-import img_MouthPreview from '@/assets/images/portfolio/games/giantwalkthroughmouth/MouthPreview.png'
-import img_DentaLabPreview from '@/assets/images/portfolio/games/dentalab/DentaLabPreview.png'
 </script>
 
 <template>
@@ -21,18 +16,71 @@ import img_DentaLabPreview from '@/assets/images/portfolio/games/dentalab/DentaL
         <SimpleLink href="#software">Software</SimpleLink>
       </HorizontalBox>
 
-      <h2 class="left-wrapper" id="games">Games.</h2>
+    <div v-for="(category, index) in categories" :key="index" class="category">
+      <h2 class="left-wrapper">{{ category.name }}.</h2>
       <PortfolioSection>
-        <PortfolioPreview :imageSrc="img_UnmaskedPreview" />
-        <PortfolioPreview :imageSrc="img_HushPreview" />
+        <div v-for="(item, itemIndex) in category.items" :key="itemIndex" class="item">
+          <PortfolioPreview :imageSrc="item.previewImg" />
+        </div>
       </PortfolioSection>
-
-      <h2 class="left-wrapper" id="vr">VR Research.</h2>
-      <PortfolioSection>
-        <PortfolioPreview :imageSrc="img_MouthPreview" />
-        <PortfolioPreview :imageSrc="img_DentaLabPreview" />
-      </PortfolioSection>
-      <h2 class="left-wrapper" id="software">Software.</h2>
-    </VerticalBox>
+    </div>
+  </VerticalBox>
   </main>
 </template>
+
+<script lang="ts">
+export default {
+  data() {
+    return {
+      categories: [
+        {
+          name: 'Games',
+          items: [
+            {
+              title: 'Unmasked',
+              previewImg: 'games/unmasked/UnmaskedPreview.png',
+              previewImgDesc: ''
+            },
+            {
+              title: 'Hush',
+              previewImg: 'games/hush/HushPreview.png',
+              previewImgDesc: ''
+            }
+          ]
+        },
+        {
+          name: 'VR Research',
+          items: [
+            {
+              title: 'Giant Walkthrough Mouth',
+              previewImg: 'research/giantwalkthroughmouth/MouthPreview.png',
+              previewImgDesc: ''
+            },
+            {
+              title: 'DentaLab',
+              previewImg: 'research/dentalab/DentaLabPreview.png',
+              previewImgDesc: ''
+            }
+          ]
+        },
+        {
+          name: 'Software',
+          items: [
+            {
+              title: 'USTAA',
+              previewImg: 'software/ustaa/USTAAPreview.jpg',
+              previewImgDesc: ''
+            },
+            {
+              title: 'LFG',
+              previewImg: 'software/lfg/LFGPreview.jpg',
+              previewImgDesc: ''
+            }
+          ]
+        }
+      ]
+    }
+  },
+  methods: {}
+}
+</script>
