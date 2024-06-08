@@ -1,5 +1,5 @@
-import './assets/main.css'
-import './assets/keyframes.css'
+import './assets/styles/main.css'
+import './assets/styles/keyframes.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'

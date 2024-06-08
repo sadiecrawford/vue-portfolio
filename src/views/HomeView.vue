@@ -5,10 +5,10 @@ import SimpleLink from '../components/SimpleLink.vue'
 import PortfolioSection from '../components/portfolio_elements/PortfolioSection.vue'
 import PortfolioPreview from '../components/portfolio_elements/PortfolioPreview.vue'
 
-import img_UnmaskedPreview from '@/assets/portfolio/games/unmasked/UnmaskedPreview.png'
-import img_HushPreview from '@/assets/portfolio/games/hush/HushPreview.png'
-import img_MouthPreview from '@/assets/portfolio/games/giantwalkthroughmouth/MouthPreview.png'
-import img_DentaLabPreview from '@/assets/portfolio/games/dentalab/DentaLabPreview.png'
+import img_UnmaskedPreview from '@/assets/images/portfolio/games/unmasked/UnmaskedPreview.png'
+import img_HushPreview from '@/assets/images/portfolio/games/hush/HushPreview.png'
+import img_MouthPreview from '@/assets/images/portfolio/games/giantwalkthroughmouth/MouthPreview.png'
+import img_DentaLabPreview from '@/assets/images/portfolio/games/dentalab/DentaLabPreview.png'
 </script>
 
 <template>
