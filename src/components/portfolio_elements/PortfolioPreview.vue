@@ -1,16 +1,23 @@
+<script setup lang="ts"></script>
+
 <template>
   <div>
-    <img :src="imageSrc" alt="Description of the image" class="static-image" />
+    <img :src="getPreviewImageUrl(imageSrc)" alt="Description of the image" class="static-image" />
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'PortfolioPreview',
   props: {
     imageSrc: {
       type: String,
       required: true
+    }
+  },
+  methods: {
+    getPreviewImageUrl(imagePath: string): string {
+      return new URL('/src/assets/portfolio/' + imagePath, import.meta.url).href
     }
   }
 }
