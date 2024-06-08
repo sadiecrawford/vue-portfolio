@@ -1,52 +1,29 @@
-/* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+  --root-font-size: 16px;
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+  --global-layout-size: 80rem; /* 1280px */
+  --global-layout-gutter: 2rem;
 
-  --vt-c-indigo: #2c3e50;
+  --global-color-green-400: hsl(160, 100%, 37%);
+  --global-color-green-a20: hsla(160, 100%, 37%, 0.2);
+  --global-color-neutral-100: hsl(0, 0%, 10%);
+  --global-color-neutral-500: hsl(0, 0%, 50%);
+  --global-color-neutral-900: hsl(0, 0%, 94%);
+  --global-color-neutral-1000: hsl(0, 0%, 100%);
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  --global-animation-fade-up: fade-up 0.5s ease-in-out;
+  --global-animation-fade-down: fade-down 0.5s ease-in-out;
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
-}
+  --global-text-color: var(--global-color-neutral-1000);
+  --global-text-color-hover: var(--global-color-neutral-500);
+  --global-background-color: var(--global-color-neutral-100);
 
-/* semantic color variables for this project */
-:root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
+  color-scheme: light dark;
 
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-
-  --section-gap: 160px;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
+  @media (prefers-color-scheme: light) {
+    --global-color-text: var(--global-color-neutral-100);
+    --global-color-text-hover: var(--global-color-neutral-500);
+    --global-background-color: var(--global-color-neutral-1000);
   }
 }
 
@@ -58,22 +35,121 @@
   font-weight: normal;
 }
 
-body {
-  min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
+html {
+  font-size: var(--root-font-size);
+  min-height: 100svh; /* svh is more reliable than vh on mobile */
+  color: var(--global-text-color);
+  background: var(--global-background-color);
+  scroll-behavior: smooth;
   transition:
     color 0.5s,
     background-color 0.5s;
-  line-height: 1.6;
+}
+
+body {
   font-family:
     Inter,
     -apple-system,
     BlinkMacSystemFont,
     'Nunito',
     sans-serif;
-  font-size: 15px;
+  font-size: var(--root-font-size);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  /* You can break up padding/margin shorthand */
+  padding-inline: 0; /* This is the same as padding-left and padding-right */
+  padding-block: 4rem; /* This is the same as padding-top and padding-bottom */
+  /* Shorthands will usually be more concise, also note how this "cascades" (overwrites) the previous properties */
+  padding: 0;
+}
+
+main {
+  margin: 0 auto;
+  padding: var(--global-layout-gutter);
+  padding-top: calc(var(--global-layout-gutter) * 3);
+  max-width: var(--global-layout-size);
+}
+
+a,
+.green {
+  padding: 0.25rem;
+  text-decoration: none;
+  color: var(--global-color-green-400);
+  transition: 0.4s;
+
+  &:hover {
+    background-color: var(--global-color-green-a20);
+  }
+}
+
+h1 {
+  margin-bottom: var(--global-layout-gutter);
+  font-size: 2.8rem;
+  font-weight: 700;
+  animation: var(--global-animation-fade-up);
+}
+
+h2 {
+  margin-block: var(--global-layout-gutter) calc(var(--global-layout-gutter) / 2);
+  font-size: 1.4rem;
+  font-weight: 600;
+  animation: var(--global-animation-fade-up);
+}
+
+.organization-example {
+  /* Some people prefer to organize css properties alphabetically */
+  /* I prefer to organize them by box model and category */
+  /* This is a personal preference and varies project to project */
+
+  /*** BOX CONTENT WHERE RELEVANT ***/
+  content: "";
+
+  /*** PLACEMENT OF BOX RELATIVE TO OTHER BOXES ***/
+  position: relative;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /*** HOW BOX SHOULD BEHAVE ***/
+  display: block;
+  overflow: hidden;
+
+  /*** BOX MODEL FROM OUTSIDE IN https://www.simplilearn.com/ice9/free_resources_article_thumb/CSS-Box-Model.png ***/
+  margin: 0;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  /*** TYPOGRAPHY ***/
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+
+  /*** COLORS/APPEARANCE ***/
+  color: inherit;
+  background-color: transparent;
+  opacity: 1;
+  transition: none;
+  translate: none; /* transforms/translations/scales do not affect other elements or dom flow */
+
+  /*** INTERACTION ***/
+  cursor: auto;
+  user-select: auto;
+  pointer-events: auto;
+  touch-action: auto;
 }
