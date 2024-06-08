@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     getPreviewImageUrl(imagePath: string): string {
-      return new URL('/src/assets/portfolio/' + imagePath, import.meta.url).href
+      return new URL('/src/assets/images/portfolio/' + imagePath, import.meta.url).href
     }
   }
 }
