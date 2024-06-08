@@ -1,9 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
+  <li>
     <img :src="getPreviewImageUrl(imageSrc)" alt="Description of the image" class="static-image" />
-  </div>
+  </li>
 </template>
 
 <script lang="ts">

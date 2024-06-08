@@ -6,13 +6,14 @@ import PortfolioPreview from '../components/portfolio_elements/PortfolioPreview.
 </script>
 
 <template>
-  <VerticalBox>
-    <h1 class="center-wrapper">Work.</h1>
-    <HorizontalBox class="center-wrapper">
-      <SimpleLink target="Work">Games</SimpleLink>
-      <SimpleLink target="VR Research">VR Research</SimpleLink>
-      <SimpleLink target="Software">Software</SimpleLink>
-    </HorizontalBox>
+  <main>
+    <VerticalBox>
+      <h1 class="center-wrapper">Work.</h1>
+      <HorizontalBox class="center-wrapper">
+        <SimpleLink target="Work">Games</SimpleLink>
+        <SimpleLink target="VR Research">VR Research</SimpleLink>
+        <SimpleLink target="Software">Software</SimpleLink>
+      </HorizontalBox>
 
     <div v-for="(category, index) in categories" :key="index" class="category">
       <h2 class="left-wrapper">{{ category.name }}.</h2>
