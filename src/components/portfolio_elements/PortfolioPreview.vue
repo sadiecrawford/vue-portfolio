@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <li>
     <img :src="imageSrc" alt="Description of the image" class="static-image" />
-  </div>
+  </li>
 </template>
 
 <script>

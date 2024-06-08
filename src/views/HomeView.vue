@@ -11,25 +11,27 @@ import img_DentaLabPreview from '@/assets/portfolio/games/dentalab/DentaLabPrevi
 </script>
 
 <template>
-  <VerticalBox>
-    <h1 class="center-wrapper">Work.</h1>
-    <HorizontalBox class="center-wrapper">
-      <SimpleLink target="Work">Games</SimpleLink>
-      <SimpleLink target="VR Research">VR Research</SimpleLink>
-      <SimpleLink target="Software">Software</SimpleLink>
-    </HorizontalBox>
+  <main>
+    <VerticalBox>
+      <h1 class="center-wrapper">Work.</h1>
+      <HorizontalBox class="center-wrapper">
+        <SimpleLink target="Work">Games</SimpleLink>
+        <SimpleLink target="VR Research">VR Research</SimpleLink>
+        <SimpleLink target="Software">Software</SimpleLink>
+      </HorizontalBox>
 
-    <h2 class="left-wrapper">Games.</h2>
-    <PortfolioSection>
-      <PortfolioPreview :imageSrc="img_UnmaskedPreview" />
-      <PortfolioPreview :imageSrc="img_HushPreview" />
-    </PortfolioSection>
+      <h2 class="left-wrapper">Games.</h2>
+      <PortfolioSection>
+        <PortfolioPreview :imageSrc="img_UnmaskedPreview" />
+        <PortfolioPreview :imageSrc="img_HushPreview" />
+      </PortfolioSection>
 
-    <h2 class="left-wrapper">VR Research.</h2>
-    <PortfolioSection>
-      <PortfolioPreview :imageSrc="img_MouthPreview" />
-      <PortfolioPreview :imageSrc="img_DentaLabPreview" />
-    </PortfolioSection>
-    <h2 class="left-wrapper">Software.</h2>
-  </VerticalBox>
+      <h2 class="left-wrapper">VR Research.</h2>
+      <PortfolioSection>
+        <PortfolioPreview :imageSrc="img_MouthPreview" />
+        <PortfolioPreview :imageSrc="img_DentaLabPreview" />
+      </PortfolioSection>
+      <h2 class="left-wrapper">Software.</h2>
+    </VerticalBox>
+  </main>
 </template>
