@@ -17,5 +17,6 @@ export default {
   gap: 1rem; /* Adjust the gap between items as needed */
   list-style: none; /* Removes the default list styling */
   padding: 0; /* Removes the default padding */
+  overflow: hidden;
 }
 </style>
