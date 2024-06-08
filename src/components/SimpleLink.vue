@@ -1,5 +1,9 @@
 <template>
-  <a :href="`#${target}`" class="simple-link">
+  <a
+      :href
+      :target
+      class="simple-link"
+  >
     <slot></slot>
   </a>
 </template>
@@ -8,22 +12,32 @@
 export default {
   name: 'SimpleLink',
   props: {
-    target: {
+    href: {
       type: String,
       required: true
+    },
+    target: {
+      type: String,
+      default: '_self'
     }
   }
 }
 </script>
 
 <style scoped>
-.simple-link {
-  text-decoration: underline;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-}
+/* Scoped styles have keys added to the class names and component to prevent them from leaking into other components */
+/* This also helps with codesplitting to reduce document size if component isn't called on a given page */
+/* You don't have to inline them, though, you can import them from a stylesheet here and have the same effect as long
+/* as you use the scoped attribute */
+/* https://vuejs.org/api/sfc-css-features */
 
-.simple-link:hover {
-  color: rgb(rgb(0, 162, 255)); /* Change to your desired hover color */
+.simple-link {
+  color: var(--global-text-color);
+  text-align: center;
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--global-color-text-hover);
+  }
 }
 </style>

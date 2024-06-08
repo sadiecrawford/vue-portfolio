@@ -22,23 +22,23 @@
 
 <style scoped>
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
+  margin: 0 auto;
+  padding: 1rem;
+  z-index: 1;
   width: 100%;
   background-color: #333;
-  padding: 1rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  animation: var(--global-animation-fade-down);
 }
 
 .navbar-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  gap: calc(var(--global-layout-gutter) / 2);
   margin: 0 auto;
-  padding: 0 1rem;
+  max-width: var(--global-layout-size);
 }
 
 .navbar-logo {
@@ -48,14 +48,11 @@
 }
 
 .navbar-menu {
-  list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
-}
-
-.navbar-item {
-  margin-left: 1rem;
+  gap: calc(var(--global-layout-gutter) / 2);
+  list-style: none;
 }
 
 .navbar-link {
