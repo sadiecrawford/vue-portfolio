@@ -10,6 +10,6 @@
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
-  background-color: #efefef;
+  background-color: var(--global-color-neutral-100);
 }
 </style>
