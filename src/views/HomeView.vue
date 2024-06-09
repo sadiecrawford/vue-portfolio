@@ -11,17 +11,17 @@ import PortfolioPreview from '@components/portfolio_elements/PortfolioPreview.vu
     <VerticalBox>
       <h1 class="center-wrapper">Work.</h1>
       <HorizontalBox class="center-wrapper">
-        <div v-for="(category, index) in categories" :key="index" class="category">
-          <SimpleLink :href="'#' + category.name">{{ category.name }}</SimpleLink>
+        <div v-for="category in categories" :key="category.name" class="category">
+          <SimpleLink :href="`#${category.name}`">{{ category.name }}</SimpleLink>
         </div>
       </HorizontalBox>
 
-      <div v-for="(category, index) in categories" :key="index" class="category">
+      <div v-for="category in categories" :key="category.name" class="category">
         <h2 :id="category.name" class="left-wrapper" style="scroll-margin-top: 96px">
           {{ category.name }}
         </h2>
         <PortfolioSection>
-          <div v-for="(item, itemIndex) in category.items" :key="itemIndex" class="item">
+          <div v-for="item in category.items" :key="item.title" class="item">
             <PortfolioPreview
               :category="category.name"
               :imageSrc="item.previewImg"

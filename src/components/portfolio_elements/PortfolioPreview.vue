@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Category } from '@enums/category.enum'
+import { getPreviewImageUrl } from '@utils/imageUtils'
 </script>
 
 <template>
@@ -29,28 +30,7 @@ export default {
       required: false
     }
   },
-  methods: {
-    getPreviewImageUrl(categoryStr: String, imagePath: string): string {
-      const category = categoryStr as Category
-      let root = import.meta.env.VITE_PORTFOLIO_URL
-      switch (category) {
-        case Category.Games:
-          root = import.meta.env.VITE_GAMES_URL
-          break
-        case Category.Research:
-          root = import.meta.env.VITE_RESEARCH_URL
-          break
-        case Category.Software:
-          root = import.meta.env.VITE_SOFTWARE_URL
-          break
-        default:
-          // default is already set above
-          break
-      }
-
-      return `${root}${imagePath}`
-    }
-  }
+  methods: {}
 }
 </script>
 
