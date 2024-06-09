@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import VerticalBox from '../components/VerticalBox.vue'
-import HorizontalBox from '../components/HorizontalBox.vue'
-import SimpleLink from '../components/SimpleLink.vue'
-import PortfolioSection from '../components/portfolio_elements/PortfolioSection.vue'
-import PortfolioPreview from '../components/portfolio_elements/PortfolioPreview.vue'
+import VerticalBox from '@components/VerticalBox.vue'
+import HorizontalBox from '@components/HorizontalBox.vue'
+import SimpleLink from '@components/SimpleLink.vue'
+import PortfolioSection from '@components/portfolio_elements/PortfolioSection.vue'
+import PortfolioPreview from '@components/portfolio_elements/PortfolioPreview.vue'
 </script>
 
 <template>
@@ -22,7 +22,11 @@ import PortfolioPreview from '../components/portfolio_elements/PortfolioPreview.
         </h2>
         <PortfolioSection>
           <div v-for="(item, itemIndex) in category.items" :key="itemIndex" class="item">
-            <PortfolioPreview :imageSrc="item.previewImg" />
+            <PortfolioPreview
+              :category="category.name"
+              :imageSrc="item.previewImg"
+              :imgDesc="item.previewImgDesc"
+            />
           </div>
         </PortfolioSection>
       </div>
@@ -34,19 +38,22 @@ import PortfolioPreview from '../components/portfolio_elements/PortfolioPreview.
 export default {
   data() {
     return {
+      // See category.enum.ts
       categories: [
         {
           name: 'Games',
           items: [
             {
               title: 'Unmasked',
-              previewImg: 'games/unmasked/UnmaskedPreview.png',
-              previewImgDesc: ''
+              previewImg: '/unmasked/UnmaskedPreview.png',
+              previewImgDesc:
+                'A screenshot of the game "Unmasked" that shows a stone house in the middle of a valley with a windmill in the distance'
             },
             {
               title: 'Hush',
-              previewImg: 'games/hush/HushPreview.png',
-              previewImgDesc: ''
+              previewImg: '/hush/HushPreview.png',
+              previewImgDesc:
+                'A screenshot of the game "Hush" that shows the second floor of a dark library, looking towards a table with a candlestick'
             }
           ]
         },
@@ -55,13 +62,15 @@ export default {
           items: [
             {
               title: 'Giant Walkthrough Mouth',
-              previewImg: 'research/giantwalkthroughmouth/MouthPreview.png',
-              previewImgDesc: ''
+              previewImg: '/giantwalkthroughmouth/MouthPreview.png',
+              previewImgDesc:
+                'A screenshot of the educational VR experience "Giant Walkthrough Mouth", which displays its large-scale model of a human mouth'
             },
             {
               title: 'DentaLab',
-              previewImg: 'research/dentalab/DentaLabPreview.png',
-              previewImgDesc: ''
+              previewImg: '/dentalab/DentaLabPreview.png',
+              previewImgDesc:
+                'A screenshot of the educational VR experience "DentaLab", showing an image of a virtual dental-themed classroom. In the bottom-right corner of the image, there is a logo for VR IEEE 2022.'
             }
           ]
         },
@@ -70,13 +79,15 @@ export default {
           items: [
             {
               title: 'USTAA',
-              previewImg: 'software/ustaa/USTAAPreview.jpg',
-              previewImgDesc: ''
+              previewImg: '/ustaa/USTAAPreview.jpg',
+              previewImgDesc:
+                'A screenshot of the website "USTAA" displaying various statistics and graphs'
             },
             {
               title: 'LFG',
-              previewImg: 'software/lfg/LFGPreview.jpg',
-              previewImgDesc: ''
+              previewImg: '/lfg/LFGPreview.jpg',
+              previewImgDesc:
+                'A screenshot of a spreadsheet displaying game character information with a logo that says "LFG"'
             }
           ]
         }
