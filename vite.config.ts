@@ -9,7 +9,10 @@ export default defineConfig({
   plugins: [vue(), VueDevTools()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
+      '@enums': fileURLToPath(new URL('./src/types/enums', import.meta.url)),
+      '@utils': fileURLToPath(new URL('./src/utils', import.meta.url))
     }
   }
 })

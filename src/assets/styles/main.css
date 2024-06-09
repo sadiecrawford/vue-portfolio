@@ -1,0 +1,18 @@
+@import 'base.css';
+
+#app {
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  animation: var(--global-animation-fade-up);
+}
+
+.left-wrapper {
+  display: flex;
+  justify-content: left;
+}
