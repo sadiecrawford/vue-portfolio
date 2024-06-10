@@ -1,23 +1,33 @@
 @keyframes fade-up {
-    from {
-        opacity: 0;
-        translate: 0 var(--global-layout-gutter);
-    }
+  from {
+    opacity: 0;
+    translate: 0 var(--global-layout-gutter);
+  }
 
-    to {
-        opacity: 1;
-        translate: 0;
-    }
+  to {
+    opacity: 1;
+    translate: 0;
+  }
 }
 
 @keyframes fade-down {
-    from {
-        opacity: 0;
-        translate: 0 calc(var(--global-layout-gutter) * -1);
-    }
+  from {
+    opacity: 0;
+    translate: 0 calc(var(--global-layout-gutter) * -1);
+  }
 
-    to {
-        opacity: 1;
-        translate: 0;
-    }
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+
+@keyframes expand {
+  from {
+    scale: 0;
+  }
+
+  to {
+    scale: 1;
+  }
 }

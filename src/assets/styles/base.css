@@ -17,6 +17,7 @@
 
   --global-animation-fade-up: fade-up 0.5s ease-in-out;
   --global-animation-fade-down: fade-down 0.5s ease-in-out;
+  --global-animation-expand: expand 0.5s ease-in-out;
 
   color-scheme: light dark;
 
@@ -87,6 +88,11 @@ main {
   max-width: var(--global-layout-size);
 }
 
+hr {
+  margin-block: 1.5rem;
+  animation: var(--global-animation-expand);
+}
+
 a {
   margin-inline: 2px;
   border-radius: 4px;
@@ -101,6 +107,31 @@ a {
   }
 }
 
+a.hidden {
+  display: flex;
+  color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--global-text-color);
+  animation: var(--global-animation-expand);
+}
+
+strong {
+  font-weight: 650;
+  padding-inline: 0.25rem;
+}
+
+br {
+  margin-bottom: 0.5rem;
+}
+
 h1 {
   margin-bottom: var(--global-layout-gutter);
   font-weight: 700;
@@ -112,9 +143,22 @@ h1 {
 h2 {
   margin-block: var(--global-layout-gutter) calc(var(--global-layout-gutter) / 8);
   font-weight: 600;
+  font-size: 2rem;
+  color: var(--global-text-color);
+  animation: var(--global-animation-fade-up);
+}
+
+h3 {
+  margin-block: var(--global-layout-gutter) calc(var(--global-layout-gutter) / 8);
+  font-weight: 600;
   font-size: 1.4rem;
   color: var(--global-text-color);
   animation: var(--global-animation-fade-up);
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
 }
 
 .organization-example {

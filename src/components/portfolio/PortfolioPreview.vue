@@ -5,7 +5,13 @@ import { getPreviewImageUrl } from '@utils/imageUtils'
 
 <template>
   <li style="margin: 8px">
-    <img :src="getPreviewImageUrl(category, imageSrc)" :alt="imageDesc" class="static-image" />
+    <a class="hidden" :href="target">
+      <img
+        :src="getPreviewImageUrl(category, `/${target}/${imageSrc}`)"
+        :alt="imageDesc"
+        class="static-image"
+      />
+    </a>
   </li>
 </template>
 
@@ -28,6 +34,10 @@ export default {
     imageDesc: {
       type: String,
       required: false
+    },
+    target: {
+      type: String,
+      required: true
     }
   },
   methods: {}
