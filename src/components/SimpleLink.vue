@@ -1,9 +1,5 @@
 <template>
-  <a
-      :href
-      :target
-      class="simple-link"
-  >
+  <a :href :target class="simple-link">
     <slot></slot>
   </a>
 </template>
@@ -32,12 +28,7 @@ export default {
 /* https://vuejs.org/api/sfc-css-features */
 
 .simple-link {
-  color: var(--global-text-color);
-  text-align: center;
   text-decoration: underline;
-
-  &:hover {
-    color: var(--global-color-text-hover);
-  }
+  text-align: center;
 }
 </style>

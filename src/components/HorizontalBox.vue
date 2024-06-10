@@ -6,10 +6,9 @@
 
 <style scoped>
 .horizontal-box {
-  display: flex;
   flex-direction: row;
   align-items: flex-start;
+  display: flex;
   width: 100%;
-  background-color: var(--global-color-neutral-100);
 }
 </style>

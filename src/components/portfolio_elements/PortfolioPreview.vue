@@ -4,7 +4,7 @@ import { getPreviewImageUrl } from '@utils/imageUtils'
 </script>
 
 <template>
-  <li>
+  <li style="margin: 8px">
     <img :src="getPreviewImageUrl(category, imageSrc)" :alt="imageDesc" class="static-image" />
   </li>
 </template>
@@ -40,8 +40,19 @@ li {
 }
 
 .static-image {
-  max-width: 100%;
-  height: auto; /* Ensures the image scales while maintaining its aspect ratio */
+  outline-color: var(--global-outline-color-hover);
   border-radius: 12px;
+  padding: 4px;
+  height: auto; /* Ensures the image scales while maintaining its aspect ratio */
+  max-width: 100%;
+  transition: outline 0.1s ease-in-out;
+}
+
+.static-image:hover {
+  outline-style: solid;
+  outline-width: 6px;
+  outline-color: var(--global-outline-color-hover);
+  transition: outline 0.1s ease-in-out;
+  cursor: pointer;
 }
 </style>

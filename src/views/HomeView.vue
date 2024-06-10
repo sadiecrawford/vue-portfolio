@@ -17,8 +17,12 @@ import PortfolioPreview from '@components/portfolio_elements/PortfolioPreview.vu
       </HorizontalBox>
 
       <div v-for="category in categories" :key="category.name" class="category">
-        <h2 :id="category.name" class="left-wrapper" style="scroll-margin-top: 96px">
-          {{ category.name }}
+        <h2
+          :id="category.name"
+          class="left-wrapper"
+          style="scroll-margin-top: 96px; padding-left: 10px"
+        >
+          {{ category.name.toUpperCase() }}
         </h2>
         <PortfolioSection>
           <div v-for="item in category.items" :key="item.title" class="item">
