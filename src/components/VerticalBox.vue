@@ -6,9 +6,9 @@
 
 <style scoped>
 .vertical-box {
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  display: flex;
+  align-items: center;
   width: 100%;
 }
 </style>

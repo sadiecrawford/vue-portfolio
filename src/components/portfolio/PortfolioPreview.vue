@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { Category } from '@enums/category.enum'
-import { getPreviewImageUrl } from '@utils/imageUtils'
+import { getImageUrl } from '@utils/imageUtils'
 </script>
 
 <template>
   <li style="margin: 8px">
     <a class="hidden" :href="target">
       <img
-        :src="getPreviewImageUrl(category, `/${target}/${imageSrc}`)"
+        :src="getImageUrl(category, `/${target}/${imageSrc}`)"
         :alt="imageDesc"
         class="static-image"
       />

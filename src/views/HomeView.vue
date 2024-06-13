@@ -2,7 +2,7 @@
 import VerticalBox from '@components/VerticalBox.vue'
 import HorizontalBox from '@components/HorizontalBox.vue'
 import SimpleLink from '@components/SimpleLink.vue'
-import PortfolioSection from '@portfolio/PortfolioSection.vue'
+import GridBox from '@common/GridBox.vue'
 import PortfolioPreview from '@portfolio/PortfolioPreview.vue'
 </script>
 
@@ -24,7 +24,7 @@ import PortfolioPreview from '@portfolio/PortfolioPreview.vue'
         >
           {{ category.name.toUpperCase() }}
         </h2>
-        <PortfolioSection>
+        <GridBox>
           <div v-for="item in category.items" :key="item.target" class="item">
             <PortfolioPreview
               :category="category.name"
@@ -33,7 +33,7 @@ import PortfolioPreview from '@portfolio/PortfolioPreview.vue'
               :target="item.target"
             />
           </div>
-        </PortfolioSection>
+        </GridBox>
       </div>
     </VerticalBox>
   </main>

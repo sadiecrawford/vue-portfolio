@@ -14,7 +14,8 @@
       "@enums/*": ["./src/types/enums/*"],
       "@utils/*": ["./src/utils/*"],
       "@views/*": ["./src/views/*"],
-      "@work/*": ["./src/views/work/*"]
+      "@work/*": ["./src/views/work/*"],
+      "@common/*": ["./src/components/common/*"]
     }
   }
 }

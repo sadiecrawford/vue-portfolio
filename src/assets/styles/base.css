@@ -26,6 +26,7 @@
     --global-text-color-hover: var(--global-color-green-300);
     --global-outline-color-hover: var(--global-color-neutral-1000);
     --global-background-color: var(--global-color-neutral-30);
+    --global-bullet-color: var(--global-color-green-400);
   }
 
   @media (prefers-color-scheme: light) {
@@ -33,6 +34,7 @@
     --global-text-color-hover: var(--global-color-green-400);
     --global-outline-color-hover: var(--global-color-neutral-30);
     --global-background-color: var(--global-color-neutral-1000);
+    --global-bullet-color: var(--global-color-green-150);
   }
 }
 
@@ -88,6 +90,20 @@ main {
   max-width: var(--global-layout-size);
 }
 
+video {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  max-width: 580px;
+}
+
+img {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  max-width: 580px;
+}
+
 hr {
   margin-block: 1.5rem;
   animation: var(--global-animation-expand);
@@ -141,7 +157,7 @@ h1 {
 }
 
 h2 {
-  margin-block: var(--global-layout-gutter) calc(var(--global-layout-gutter) / 8);
+  margin-bottom: var(--global-layout-gutter) calc(var(--global-layout-gutter) / 8);
   font-weight: 600;
   font-size: 2rem;
   color: var(--global-text-color);
@@ -149,16 +165,42 @@ h2 {
 }
 
 h3 {
-  margin-block: var(--global-layout-gutter) calc(var(--global-layout-gutter) / 8);
+  margin-bottom: var(--global-layout-gutter) calc(var(--global-layout-gutter) / 8);
   font-weight: 600;
   font-size: 1.4rem;
   color: var(--global-text-color);
   animation: var(--global-animation-fade-up);
 }
 
+ul.colored-bullets {
+  list-style: none;
+  z-index: 0;
+  padding: 0;
+}
+
+ul.colored-bullets li {
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+  position: relative;
+  z-index: 0;
+}
+
+ul.colored-bullets li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  color: var(--global-bullet-color);
+}
+
 .centered {
   display: flex;
-  justify-content: center;
+  justify-self: center;
+}
+
+.left-aligned {
+  display: flex;
+  justify-self: left;
 }
 
 .organization-example {

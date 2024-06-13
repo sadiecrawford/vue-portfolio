@@ -1,8 +1,8 @@
 @import 'base.css';
 
 #app {
-  margin: 0 auto;
   font-weight: normal;
+  margin: 0 auto;
 }
 
 .center-wrapper {
@@ -15,4 +15,27 @@
 .left-wrapper {
   display: flex;
   justify-content: left;
+  width: 100%;
+  animation: var(--global-animation-fade-up);
+}
+
+.right-wrapper {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  animation: var(--global-animation-fade-up);
+}
+
+.top-wrapper {
+  display: flex;
+  justify-content: top;
+  width: 100%;
+  animation: var(--global-animation-fade-up);
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: bottom;
+  width: 100%;
+  animation: var(--global-animation-fade-up);
 }

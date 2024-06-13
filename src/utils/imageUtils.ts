@@ -1,6 +1,6 @@
 import { Category } from '@enums/category.enum'
 
-export function getPreviewImageUrl(categoryStr: String, imagePath: string): string {
+export function getImageUrl(categoryStr: String, imagePath: string): string {
   const category = categoryStr as Category
   switch (category) {
     case Category.Games:
