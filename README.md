@@ -1,18 +1,19 @@
-# vue-portfolio
+# Sadie Crawford's Portfolio
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a879d0fb-8658-4249-84e3-72bfa4c6513b/deploy-status)](https://app.netlify.com/sites/sadiecrawford/deploys)
 
-This template should help get you started developing with Vue 3 in Vite.
+Welcome to my Vue 3 [portfolio](https://sadiecrawford.netlify.app) project, built with Vite! 
 
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Type Support for `.vue` Imports in TS
+### Linting
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Run [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) & [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) to lint your code:
+```sh
+npm run lint
+```
+I have <b>.prettierrc.json</b> setup with a css declaration sorter.
 
 ## Project Setup
 
@@ -20,20 +21,13 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
+To start a server for development with hot reloading:
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## Continuous Deployment
 
-```sh
-npm run build
-```
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a879d0fb-8658-4249-84e3-72bfa4c6513b/deploy-status)](https://app.netlify.com/sites/sadiecrawford/deploys)
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+See the current deployment of the <b>dev</b> branch [here](https://sadiecrawford.netlify.app).
