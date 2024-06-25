@@ -7,8 +7,9 @@
 <style scoped>
 .horizontal-box {
   flex-direction: row;
-  align-items: flex-start;
+  flex-wrap: wrap;
   display: flex;
+  align-items: flex-start;
   width: 100%;
 }
 </style>

@@ -151,6 +151,7 @@ br {
 h1 {
   margin-bottom: var(--global-layout-gutter);
   font-weight: 700;
+  scroll-margin-top: 96px;
   font-size: 2.8rem;
   color: var(--global-text-color);
   animation: var(--global-animation-fade-up);
@@ -159,6 +160,7 @@ h1 {
 h2 {
   margin-bottom: var(--global-layout-gutter) calc(var(--global-layout-gutter) / 8);
   font-weight: 600;
+  scroll-margin-top: 96px;
   font-size: 2rem;
   color: var(--global-text-color);
   animation: var(--global-animation-fade-up);
@@ -166,8 +168,18 @@ h2 {
 
 h3 {
   margin-bottom: var(--global-layout-gutter) calc(var(--global-layout-gutter) / 8);
-  font-weight: 600;
+  font-weight: 800;
+  scroll-margin-top: 96px;
   font-size: 1.4rem;
+  color: var(--global-text-color);
+  animation: var(--global-animation-fade-up);
+}
+
+h4 {
+  margin-bottom: var(--global-layout-gutter) calc(var(--global-layout-gutter) / 8);
+  font-weight: 800;
+  scroll-margin-top: 96px;
+  font-size: 1.2rem;
   color: var(--global-text-color);
   animation: var(--global-animation-fade-up);
 }

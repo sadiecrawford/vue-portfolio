@@ -1,0 +1,60 @@
+.portfolio h1 {
+  padding-top: 1rem;
+  padding-inline: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+.portfolio h2 {
+  padding-top: 1rem;
+  padding-inline: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+.portfolio h3 {
+  padding-top: 1rem;
+  padding-inline: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+.portfolio h4 {
+  padding-top: 1rem;
+  padding-inline: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+.portfolio p {
+  padding-top: 1rem;
+  padding-inline: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+.flex-grid {
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  display: flex;
+  align-items: flex-start;
+  margin-block: 1rem;
+}
+
+.vertical {
+  width: auto;
+  height: auto;
+}
+
+.portfolio .horizontal-box {
+  flex-wrap: wrap;
+  justify-items: center;
+  display: flex;
+  width: 100%;
+  background-color: aquamarine;
+}
+
+.portfolio-hr {
+  align-self: center;
+  width: 80%;
+}

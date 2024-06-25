@@ -4,11 +4,12 @@ import PortfolioHeader from '@portfolio/PortfolioHeader.vue'
 import TextBlock from '@common/TextBlock.vue'
 import FlexBox from '@common/FlexBox.vue'
 import { getImageUrl } from '@utils/imageUtils'
+import HorizontalBox from '@/components/HorizontalBox.vue'
 </script>
 
 <template>
-  <main>
-    <VerticalBox>
+  <main class="portfolio">
+    <FlexBox>
       <!-- Header -->
       <PortfolioHeader title="Unmasked.">
         <strong>Programmer & Game Designer</strong> | VR Puzzle Game | Unreal 5 Early Access
@@ -19,7 +20,7 @@ import { getImageUrl } from '@utils/imageUtils'
       </PortfolioHeader>
 
       <!-- Description -->
-      <FlexBox>
+      <HorizontalBox>
         <video autoplay controls muted>
           <source
             :src="getImageUrl('Games', `/unmasked/UnmaskedTrailer.mp4`)"
@@ -36,10 +37,10 @@ import { getImageUrl } from '@utils/imageUtils'
           alien's perspective. The mask, an AI-powered guide, navigates and provides hints for the
           mind-bending puzzles, which defy time and 3D space.
         </TextBlock>
-      </FlexBox>
+      </HorizontalBox>
 
       <!-- Contributions -->
-      <FlexBox>
+      <HorizontalBox>
         <img
           :src="getImageUrl('Games', `/unmasked/UnmaskedAward1.png`)"
           alt="Sadie Crawford, Charlotte Atwill, Seung Hyuk Jang (professor), and Daniel Briz (left to right) holding awards for 'Best MiDAS Capstone'"
@@ -64,13 +65,13 @@ import { getImageUrl } from '@utils/imageUtils'
             </li>
           </ul>
         </TextBlock>
-      </FlexBox>
+      </HorizontalBox>
 
-      <!-- Gameplay 1 -->
-      <FlexBox style="justify-content: space-around; padding-inline: 2rem">
+      <!-- Gameplay -->
+      <HorizontalBox style="justify-content: space-around; padding-inline: 2rem">
         <img
           class="vertical"
-          style="align-self: center"
+          style="align-self: center; width: 640px"
           :src="getImageUrl('Games', `/unmasked/UnmaskedConvergence.png`)"
           alt="Seung Hyuk Jang (professor), Sadie Crawford, and Charlotte Atwill (left to right) standing next to an 'Unmasked' banner at University of Florida's 2022 Convergence event"
         />
@@ -105,27 +106,7 @@ import { getImageUrl } from '@utils/imageUtils'
             </video>
           </TextBlock>
         </VerticalBox>
-      </FlexBox>
-    </VerticalBox>
+      </HorizontalBox>
+    </FlexBox>
   </main>
 </template>
-
-<style scoped>
-.flexbox-container {
-  justify-content: space-between;
-  margin: 1rem;
-}
-
-.vertical {
-  width: auto;
-  height: auto;
-}
-
-div.force-width {
-  width: 580px;
-}
-
-.flex-grid div {
-  width: 580px;
-}
-</style>

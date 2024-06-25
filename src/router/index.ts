@@ -14,6 +14,11 @@ const router = createRouter({
       component: () => import('@work/UnmaskedView.vue')
     },
     {
+      path: '/hush',
+      name: 'Hush',
+      component: () => import('@work/HushView.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
