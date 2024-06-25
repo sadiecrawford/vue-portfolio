@@ -45,6 +45,16 @@ export default {
           name: 'Games',
           items: [
             {
+              target: 'dda',
+              previewImg: 'DDAPreview.png',
+              previewImgDesc: ''
+            },
+            {
+              target: 'ddgr',
+              previewImg: 'DDGRPreview.png',
+              previewImgDesc: ''
+            },
+            {
               target: 'unmasked',
               previewImg: 'UnmaskedPreview.png',
               previewImgDesc:

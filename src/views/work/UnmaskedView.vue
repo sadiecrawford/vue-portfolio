@@ -7,7 +7,6 @@ import { getImageUrl } from '@utils/imageUtils'
 
 <template>
   <main class="portfolio">
-    <link rel="stylesheet" href="../../src/assets/styles/portfolio.css" />
     <VerticalBox>
       <!-- Header -->
       <PortfolioHeader title="Unmasked." style="width: 100%">
