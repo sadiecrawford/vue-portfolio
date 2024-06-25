@@ -42,6 +42,8 @@ import SimpleLink from '@components/SimpleLink.vue'
         </video>
       </FlexBox>
 
+      <hr class="portfolio-hr" />
+
       <!-- Contributions -->
       <FlexBox>
         <VerticalBox>
@@ -53,7 +55,7 @@ import SimpleLink from '@components/SimpleLink.vue'
             the following:
           </p>
           <br />
-          <ul class="colored-bullets" style="margin-inline: 2rem">
+          <ul class="colored-bullets">
             <li>
               Haptic-feedback-based Ouija board puzzle <SimpleLink href="#ouija">[Jump]</SimpleLink>
             </li>
@@ -106,7 +108,7 @@ import SimpleLink from '@components/SimpleLink.vue'
         </VerticalBox>
 
         <VerticalBox>
-          <video controls muted style="margin-bottom: 2rem">
+          <video controls muted>
             <source
               :src="getImageUrl('Games', `/hush/HushOuija.mp4`)"
               alt="A video demonstrating the game 'Hush's' ouija board puzzle, where the plancette spells out 'DANGER' as it is also written on the chalkboard"
@@ -158,7 +160,7 @@ import SimpleLink from '@components/SimpleLink.vue'
           </p>
         </VerticalBox>
 
-        <video controls muted style="margin-bottom: 2rem">
+        <video controls muted>
           <source
             :src="getImageUrl('Games', `/hush/HushStateChanges.mp4`)"
             alt="A video demonstrating the game 'Hush's' state changes. In unison with the clock chimes, the portrait painting changes from an old man, to a slightly younger version of the man wearing a necklace, to a young version of the same, and finally to images of hands grasping to escape from the frame. Additionally, the player's hands progressively become older and more frail looking."

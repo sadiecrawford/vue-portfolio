@@ -1,17 +1,16 @@
 <script setup lang="ts">
 import VerticalBox from '@components/VerticalBox.vue'
 import PortfolioHeader from '@portfolio/PortfolioHeader.vue'
-import TextBlock from '@common/TextBlock.vue'
 import FlexBox from '@common/FlexBox.vue'
 import { getImageUrl } from '@utils/imageUtils'
-import HorizontalBox from '@/components/HorizontalBox.vue'
 </script>
 
 <template>
   <main class="portfolio">
-    <FlexBox>
+    <link rel="stylesheet" href="../../src/assets/styles/portfolio.css" />
+    <VerticalBox>
       <!-- Header -->
-      <PortfolioHeader title="Unmasked.">
+      <PortfolioHeader title="Unmasked." style="width: 100%">
         <strong>Programmer & Game Designer</strong> | VR Puzzle Game | Unreal 5 Early Access
         <br />
         3 developers | 4 months | April 2022
@@ -20,7 +19,18 @@ import HorizontalBox from '@/components/HorizontalBox.vue'
       </PortfolioHeader>
 
       <!-- Description -->
-      <HorizontalBox>
+      <FlexBox>
+        <VerticalBox>
+          <h3>Description.</h3>
+          <p>
+            For my Master's capstone project, my team and I developed <strong>"Unmasked,"</strong> a
+            VR puzzle game with a heavy usage of non-Euclidean spaces. Transitioning from Unity to
+            Unreal, we jumped headfirst into this project to tell the story of human greed from an
+            alien's perspective. The mask, an AI-powered guide, navigates and provides hints for the
+            mind-bending puzzles, which defy time and 3D space.
+          </p>
+        </VerticalBox>
+
         <video autoplay controls muted>
           <source
             :src="getImageUrl('Games', `/unmasked/UnmaskedTrailer.mp4`)"
@@ -29,24 +39,14 @@ import HorizontalBox from '@/components/HorizontalBox.vue'
           />
           Your browser does not support the video tag.
         </video>
+      </FlexBox>
 
-        <TextBlock style="justify-self: flex-start" title="Description.">
-          For my Master's capstone project, my team and I developed <strong>"Unmasked,"</strong> a
-          VR puzzle game with a heavy usage of non-Euclidean spaces. Transitioning from Unity to
-          Unreal, we jumped headfirst into this project to tell the story of human greed from an
-          alien's perspective. The mask, an AI-powered guide, navigates and provides hints for the
-          mind-bending puzzles, which defy time and 3D space.
-        </TextBlock>
-      </HorizontalBox>
+      <hr class="portfolio-hr" />
 
       <!-- Contributions -->
-      <HorizontalBox>
-        <img
-          :src="getImageUrl('Games', `/unmasked/UnmaskedAward1.png`)"
-          alt="Sadie Crawford, Charlotte Atwill, Seung Hyuk Jang (professor), and Daniel Briz (left to right) holding awards for 'Best MiDAS Capstone'"
-        />
-
-        <TextBlock title="Contributions.">
+      <FlexBox>
+        <VerticalBox>
+          <h3>Contributions.</h3>
           <ul class="colored-bullets">
             <li>
               Designed and implemented all zone-specific puzzles to align with the story's overall
@@ -64,25 +64,22 @@ import HorizontalBox from '@/components/HorizontalBox.vue'
               mask's awakening sequence, the watering can's pour, and the seed spread visual.
             </li>
           </ul>
-        </TextBlock>
-      </HorizontalBox>
+        </VerticalBox>
+
+        <img
+          :src="getImageUrl('Games', `/unmasked/UnmaskedAward1.png`)"
+          alt="Sadie Crawford, Charlotte Atwill, Seung Hyuk Jang (professor), and Daniel Briz (left to right) holding awards for 'Best MiDAS Capstone'"
+        />
+      </FlexBox>
+
+      <hr class="portfolio-hr" />
 
       <!-- Gameplay -->
-      <HorizontalBox style="justify-content: space-around; padding-inline: 2rem">
-        <img
-          class="vertical"
-          style="align-self: center; width: 640px"
-          :src="getImageUrl('Games', `/unmasked/UnmaskedConvergence.png`)"
-          alt="Seung Hyuk Jang (professor), Sadie Crawford, and Charlotte Atwill (left to right) standing next to an 'Unmasked' banner at University of Florida's 2022 Convergence event"
-        />
-
+      <FlexBox style="justify-content: space-around; padding-inline: 2rem; align-content: center">
         <VerticalBox>
-          <TextBlock title="Seasons Puzzle.">
-            <video
-              style="width: 100%; height: 100%; max-height: max-content; max-width: max-content"
-              controls
-              muted
-            >
+          <VerticalBox>
+            <h3>Seasons Puzzle.</h3>
+            <video controls muted>
               <source
                 :src="getImageUrl('Games', `/unmasked/UnmaskedSeasonsPuzzle.mp4`)"
                 alt="A video showing the 'Seasons' puzzle, where the player goes into the past of winter to plant and water seeds. Upon returning to the future of summer, the seeds have grown into corn."
@@ -90,13 +87,10 @@ import HorizontalBox from '@/components/HorizontalBox.vue'
               />
               Your browser does not support the video tag.
             </video>
-          </TextBlock>
-          <TextBlock title="Rope Physics.">
-            <video
-              style="width: 100%; height: 100%; max-height: max-content; max-width: max-content"
-              controls
-              muted
-            >
+          </VerticalBox>
+          <VerticalBox>
+            <h3>Rope Physics.</h3>
+            <video controls muted>
               <source
                 :src="getImageUrl('Games', `/unmasked/UnmaskedRopePhysics.mp4`)"
                 alt="A demonstration of rope physics in the VR game 'Unmasked.'"
@@ -104,9 +98,21 @@ import HorizontalBox from '@/components/HorizontalBox.vue'
               />
               Your browser does not support the video tag.
             </video>
-          </TextBlock>
+          </VerticalBox>
         </VerticalBox>
-      </HorizontalBox>
-    </FlexBox>
+
+        <img
+          style="align-self: center; width: 500px; margin-top: 2.5rem"
+          :src="getImageUrl('Games', `/unmasked/UnmaskedConvergence.png`)"
+          alt="Seung Hyuk Jang (professor), Sadie Crawford, and Charlotte Atwill (left to right) standing next to an 'Unmasked' banner at University of Florida's 2022 Convergence event"
+        />
+      </FlexBox>
+    </VerticalBox>
   </main>
 </template>
+
+<style scoped>
+.flex-grid > div {
+  width: 580px;
+}
+</style>

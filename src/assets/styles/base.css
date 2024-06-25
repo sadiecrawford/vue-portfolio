@@ -187,7 +187,7 @@ h4 {
 ul.colored-bullets {
   list-style: none;
   z-index: 0;
-  padding: 0;
+  padding-inline: 2rem;
 }
 
 ul.colored-bullets li {

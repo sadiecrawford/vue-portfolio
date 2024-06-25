@@ -46,15 +46,11 @@
   height: auto;
 }
 
-.portfolio .horizontal-box {
-  flex-wrap: wrap;
-  justify-items: center;
-  display: flex;
-  width: 100%;
-  background-color: aquamarine;
-}
-
 .portfolio-hr {
   align-self: center;
   width: 80%;
+}
+
+.video {
+  margin-bottom: 2rem;
 }
