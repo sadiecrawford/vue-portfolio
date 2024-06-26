@@ -11,8 +11,12 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
+      '@portfolio': fileURLToPath(new URL('./src/components/portfolio', import.meta.url)),
       '@enums': fileURLToPath(new URL('./src/types/enums', import.meta.url)),
-      '@utils': fileURLToPath(new URL('./src/utils', import.meta.url))
+      '@utils': fileURLToPath(new URL('./src/utils', import.meta.url)),
+      '@views': fileURLToPath(new URL('./src/views', import.meta.url)),
+      '@work': fileURLToPath(new URL('./src/views/work', import.meta.url)),
+      '@common': fileURLToPath(new URL('./src/components/common', import.meta.url))
     }
   }
 })

@@ -1,0 +1,58 @@
+.portfolio h1 {
+  padding-top: 1rem;
+  padding-inline: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+.portfolio h2 {
+  padding-top: 1rem;
+  padding-inline: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+.portfolio h3 {
+  padding-top: 1rem;
+  padding-inline: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+.portfolio h4 {
+  padding-top: 1rem;
+  padding-inline: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+.portfolio p {
+  padding-inline: 2rem;
+  padding-block: 1.5rem 0.5rem;
+  text-align: left;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  margin-block: 1rem;
+}
+
+.vertical {
+  width: auto;
+  height: auto;
+}
+
+.portfolio hr {
+  align-self: center;
+  margin-block: 2rem 3rem;
+  margin-inline: 4rem;
+  width: auto;
+  background-color: aqua;
+}
+
+.video {
+  margin-bottom: 2rem;
+}

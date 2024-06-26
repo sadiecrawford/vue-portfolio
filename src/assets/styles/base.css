@@ -4,26 +4,37 @@
   --global-layout-size: 80rem; /* 1280px */
   --global-layout-gutter: 2rem;
 
-  --global-color-green-400: hsl(160, 100%, 37%);
-  --global-color-green-a20: hsla(160, 100%, 37%, 0.2);
-  --global-color-neutral-100: hsl(0, 0%, 10%);
-  --global-color-neutral-500: hsl(0, 0%, 50%);
-  --global-color-neutral-900: hsl(0, 0%, 94%);
+  --global-color-orange-400: hsl(28, 67%, 44%);
+  --global-color-green-150: hsl(88, 38%, 15%);
+  --global-color-green-300: hsl(74, 32%, 32%);
+  --global-color-green-400: hsl(74, 32%, 40%);
+
+  --global-color-neutral-30: hsl(222, 10%, 3%);
+  --global-color-neutral-100: hsl(222, 10%, 10%);
+  --global-color-neutral-500: hsl(222, 10%, 50%);
+  --global-color-neutral-900: hsl(222, 10%, 94%);
   --global-color-neutral-1000: hsl(0, 0%, 100%);
 
   --global-animation-fade-up: fade-up 0.5s ease-in-out;
   --global-animation-fade-down: fade-down 0.5s ease-in-out;
-
-  --global-text-color: var(--global-color-neutral-1000);
-  --global-text-color-hover: var(--global-color-neutral-500);
-  --global-background-color: var(--global-color-neutral-100);
+  --global-animation-expand: expand 0.5s ease-in-out;
 
   color-scheme: light dark;
 
+  @media (prefers-color-scheme: dark) {
+    --global-text-color: var(--global-color-neutral-1000);
+    --global-text-color-hover: var(--global-color-green-300);
+    --global-outline-color-hover: var(--global-color-neutral-1000);
+    --global-background-color: var(--global-color-neutral-30);
+    --global-bullet-color: var(--global-color-green-400);
+  }
+
   @media (prefers-color-scheme: light) {
-    --global-color-text: var(--global-color-neutral-100);
-    --global-color-text-hover: var(--global-color-neutral-500);
+    --global-text-color: var(--global-color-neutral-30);
+    --global-text-color-hover: var(--global-color-green-400);
+    --global-outline-color-hover: var(--global-color-neutral-30);
     --global-background-color: var(--global-color-neutral-1000);
+    --global-bullet-color: var(--global-color-green-150);
   }
 }
 
@@ -31,16 +42,16 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
   font-weight: normal;
+  margin: 0;
 }
 
 html {
-  font-size: var(--root-font-size);
-  min-height: 100svh; /* svh is more reliable than vh on mobile */
-  color: var(--global-text-color);
   background: var(--global-background-color);
   scroll-behavior: smooth;
+  min-height: 100svh; /* svh is more reliable than vh on mobile */
+  font-size: var(--root-font-size);
+  color: var(--global-text-color);
   transition:
     color 0.5s,
     background-color 0.5s;
@@ -64,12 +75,12 @@ header {
   top: 0;
   left: 0;
   display: flex;
-  width: 100%;
   /* You can break up padding/margin shorthand */
   padding-inline: 0; /* This is the same as padding-left and padding-right */
   padding-block: 4rem; /* This is the same as padding-top and padding-bottom */
   /* Shorthands will usually be more concise, also note how this "cascades" (overwrites) the previous properties */
   padding: 0;
+  width: 100%;
 }
 
 main {
@@ -79,30 +90,129 @@ main {
   max-width: var(--global-layout-size);
 }
 
-a,
-.green {
-  padding: 0.25rem;
-  text-decoration: none;
-  color: var(--global-color-green-400);
-  transition: 0.4s;
+video {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  max-width: 580px;
+}
+
+img {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  max-width: 580px;
+}
+
+hr {
+  margin-block: 1.5rem;
+  animation: var(--global-animation-expand);
+}
+
+a {
+  margin-inline: 2px;
+  border-radius: 4px;
+  padding: 0.3rem;
+  color: var(--global-text-color);
+  transition: 0.4s ease-out;
 
   &:hover {
-    background-color: var(--global-color-green-a20);
+    border-radius: 4px;
+    color: var(--global-color-neutral-1000);
+    background-color: var(--global-text-color-hover);
   }
+}
+
+a.hidden {
+  display: flex;
+  color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--global-text-color);
+  animation: var(--global-animation-expand);
+}
+
+strong {
+  font-weight: 650;
+  padding-inline: 0.25rem;
+}
+
+br {
+  margin-bottom: 0.5rem;
 }
 
 h1 {
   margin-bottom: var(--global-layout-gutter);
-  font-size: 2.8rem;
   font-weight: 700;
+  scroll-margin-top: 96px;
+  font-size: 2.8rem;
+  color: var(--global-text-color);
   animation: var(--global-animation-fade-up);
 }
 
 h2 {
-  margin-block: var(--global-layout-gutter) calc(var(--global-layout-gutter) / 2);
-  font-size: 1.4rem;
+  margin-bottom: var(--global-layout-gutter) calc(var(--global-layout-gutter) / 8);
   font-weight: 600;
+  scroll-margin-top: 96px;
+  font-size: 2rem;
+  color: var(--global-text-color);
   animation: var(--global-animation-fade-up);
+}
+
+h3 {
+  margin-bottom: var(--global-layout-gutter) calc(var(--global-layout-gutter) / 8);
+  font-weight: 800;
+  scroll-margin-top: 96px;
+  font-size: 1.4rem;
+  color: var(--global-text-color);
+  animation: var(--global-animation-fade-up);
+}
+
+h4 {
+  margin-bottom: var(--global-layout-gutter) calc(var(--global-layout-gutter) / 8);
+  font-weight: 800;
+  scroll-margin-top: 96px;
+  font-size: 1.2rem;
+  color: var(--global-text-color);
+  animation: var(--global-animation-fade-up);
+}
+
+ul.colored-bullets {
+  list-style: none;
+  z-index: 0;
+  padding-inline: 2rem;
+}
+
+ul.colored-bullets li {
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+  position: relative;
+  z-index: 0;
+}
+
+ul.colored-bullets li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  color: var(--global-bullet-color);
+}
+
+.centered {
+  display: flex;
+  justify-self: center;
+}
+
+.left-aligned {
+  display: flex;
+  justify-self: left;
 }
 
 .organization-example {
@@ -111,7 +221,7 @@ h2 {
   /* This is a personal preference and varies project to project */
 
   /*** BOX CONTENT WHERE RELEVANT ***/
-  content: "";
+  content: '';
 
   /*** PLACEMENT OF BOX RELATIVE TO OTHER BOXES ***/
   position: relative;
