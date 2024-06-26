@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import '@components/VerticalBox.vue'
+import '@common/VerticalFlexBox.vue'
 </script>
 
 <template>
   <div class="center-wrapper">
-    <VerticalBox>
+    <VerticalFlexBox>
       <h1 class="center-wrapper">{{ title }}</h1>
       <p style="text-align: center">
         <slot></slot>
       </p>
       <hr />
-    </VerticalBox>
+    </VerticalFlexBox>
   </div>
 </template>
 

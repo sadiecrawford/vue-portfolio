@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import VerticalBox from '@components/VerticalBox.vue'
-import HorizontalBox from '@components/HorizontalBox.vue'
+import VerticalFlexBox from '@common/VerticalFlexBox.vue'
+import FlexContainer from '@common/FlexContainer.vue'
 import SimpleLink from '@components/SimpleLink.vue'
 import GridBox from '@common/GridBox.vue'
 import PortfolioPreview from '@portfolio/PortfolioPreview.vue'
@@ -8,13 +8,13 @@ import PortfolioPreview from '@portfolio/PortfolioPreview.vue'
 
 <template>
   <main>
-    <VerticalBox>
+    <VerticalFlexBox>
       <h1 class="center-wrapper">Work.</h1>
-      <HorizontalBox class="center-wrapper">
+      <FlexContainer class="center-wrapper">
         <div v-for="category in categories" :key="category.name" class="category">
           <SimpleLink :href="`#${category.name}`">{{ category.name }}</SimpleLink>
         </div>
-      </HorizontalBox>
+      </FlexContainer>
 
       <div v-for="category in categories" :key="category.name" class="category">
         <h2 :id="category.name" class="left-wrapper" style="padding-left: 10px">
@@ -31,7 +31,7 @@ import PortfolioPreview from '@portfolio/PortfolioPreview.vue'
           </div>
         </GridBox>
       </div>
-    </VerticalBox>
+    </VerticalFlexBox>
   </main>
 </template>
 
@@ -108,3 +108,9 @@ export default {
   methods: {}
 }
 </script>
+
+<style scoped>
+.flex-container {
+  flex-direction: row;
+}
+</style>

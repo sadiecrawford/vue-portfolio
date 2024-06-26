@@ -1,18 +1,18 @@
 <template>
   <div class="center-wrapper">
-    <VerticalBox>
+    <VerticalFlexBox>
       <h3 class="left-wrapper" style="padding-top: 1rem; padding-inline: 1rem; text-align: left">
         {{ title }}
       </h3>
       <p>
         <slot></slot>
       </p>
-    </VerticalBox>
+    </VerticalFlexBox>
   </div>
 </template>
 
 <script setup lang="ts">
-import '@components/VerticalBox.vue'
+import '@common/VerticalFlexBox.vue'
 
 defineProps({
   title: {

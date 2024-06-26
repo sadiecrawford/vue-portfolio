@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VerticalBox from '@components/VerticalBox.vue'
+import VerticalFlexBox from '@common/VerticalFlexBox.vue'
 import PortfolioHeader from '@portfolio/PortfolioHeader.vue'
 import FlexContainer from '@common/FlexContainer.vue'
 import { getMediaUrl } from '@utils/mediaUtils'
@@ -20,7 +20,7 @@ import SimpleLink from '@components/SimpleLink.vue'
 
     <!-- Description -->
     <FlexContainer>
-      <VerticalBox>
+      <VerticalFlexBox>
         <h3>Description.</h3>
         <p>
           In <strong>"Hush,"</strong> you play as an innocent intern looking to pick up an antique
@@ -28,7 +28,7 @@ import SimpleLink from '@components/SimpleLink.vue'
           behind you. At the expense of interns' souls, he keeps his youth. You must escape before
           he quenches his thirst yet again.
         </p>
-      </VerticalBox>
+      </VerticalFlexBox>
 
       <video autoplay controls muted>
         <source
@@ -44,7 +44,7 @@ import SimpleLink from '@components/SimpleLink.vue'
 
     <!-- Contributions -->
     <FlexContainer>
-      <VerticalBox>
+      <VerticalFlexBox>
         <h3>Contributions.</h3>
         <p>
           As Lead Systems Engineer, I coordinated tasks and communication among the programming team
@@ -64,7 +64,7 @@ import SimpleLink from '@components/SimpleLink.vue'
             <br /><SimpleLink href="#state-changes">[Jump]</SimpleLink>
           </li>
         </ul>
-      </VerticalBox>
+      </VerticalFlexBox>
       <img
         :src="getMediaUrl('Games', `/hush/HushUpstairs.png`)"
         alt="A dimly lit library with wooden shelves, a candle-lit desk, and red-patterned wallpaper from the video game 'Hush'"
@@ -75,7 +75,7 @@ import SimpleLink from '@components/SimpleLink.vue'
 
     <!-- Ouija Board -->
     <FlexContainer>
-      <VerticalBox>
+      <VerticalFlexBox>
         <h3 id="ouija">Ouija Board.</h3>
         <h4>Description.</h4>
         <p>
@@ -102,9 +102,9 @@ import SimpleLink from '@components/SimpleLink.vue'
           next haptic vibration to have a greater impact on the user (See
           <SimpleLink href="#source-ouija">Ouija.cs</SimpleLink> under Code).
         </p>
-      </VerticalBox>
+      </VerticalFlexBox>
 
-      <VerticalBox>
+      <VerticalFlexBox>
         <video controls muted>
           <source
             :src="getMediaUrl('Games', `/hush/HushOuija.mp4`)"
@@ -117,28 +117,28 @@ import SimpleLink from '@components/SimpleLink.vue'
           :src="getMediaUrl('Games', `/hush/HushOuija.jpg`)"
           alt="A dimly lit scene with a Ouija board on a table, a white candle, and Unreal Engine's UI elements."
         />
-      </VerticalBox>
+      </VerticalFlexBox>
 
-      <VerticalBox style="width: 100%">
+      <VerticalFlexBox style="width: 100%">
         <h4 id="source-planchette">Planchette.cs.</h4>
         <div style="width: 100%">
           <GistPlanchetteInteraction />
         </div>
-      </VerticalBox>
+      </VerticalFlexBox>
 
-      <VerticalBox style="width: 100%">
+      <VerticalFlexBox style="width: 100%">
         <h4 id="source-ouija">Ouija.cs.</h4>
         <div style="width: 100%">
           <GistOuija />
         </div>
-      </VerticalBox>
+      </VerticalFlexBox>
     </FlexContainer>
 
     <hr />
 
     <!-- State Changes -->
     <FlexContainer>
-      <VerticalBox>
+      <VerticalFlexBox>
         <h3 id="state-changes">State Changes.</h3>
         <h4>Description.</h4>
         <p>
@@ -154,7 +154,7 @@ import SimpleLink from '@components/SimpleLink.vue'
           state changes were required to be non-linear as well. Since the following state must make
           sense given the previous, an incrementing of states is needed to track their ordering.
         </p>
-      </VerticalBox>
+      </VerticalFlexBox>
 
       <video controls muted>
         <source
@@ -165,12 +165,12 @@ import SimpleLink from '@components/SimpleLink.vue'
         Your browser does not support the video tag.
       </video>
 
-      <VerticalBox style="width: 100%">
+      <VerticalFlexBox style="width: 100%">
         <h4>Puzzles.cs.</h4>
         <div style="width: 100%">
           <GistPuzzles />
         </div>
-      </VerticalBox>
+      </VerticalFlexBox>
     </FlexContainer>
   </main>
 </template>

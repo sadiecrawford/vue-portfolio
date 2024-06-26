@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VerticalBox from '@components/VerticalBox.vue'
+import VerticalFlexBox from '@common/VerticalFlexBox.vue'
 import PortfolioHeader from '@portfolio/PortfolioHeader.vue'
 import FlexContainer from '@common/FlexContainer.vue'
 import { getMediaUrl } from '@utils/mediaUtils'
@@ -21,7 +21,7 @@ import SimpleLink from '@/components/SimpleLink.vue'
 
     <!-- Description -->
     <FlexContainer>
-      <VerticalBox>
+      <VerticalFlexBox>
         <h3>Description.</h3>
         <p>
           <strong>"Giant Walkthrough Mouth"</strong> is a cutting-edge multiplayer VR application
@@ -31,7 +31,7 @@ import SimpleLink from '@/components/SimpleLink.vue'
           interactable teeth and a comprehensive quiz to test knowledge retention. This unique
           virtual reality experience offers an innovative approach to dental education.
         </p>
-      </VerticalBox>
+      </VerticalFlexBox>
 
       <video autoplay controls muted>
         <source
@@ -46,7 +46,7 @@ import SimpleLink from '@/components/SimpleLink.vue'
 
     <!-- Contributions -->
     <FlexContainer>
-      <VerticalBox>
+      <VerticalFlexBox>
         <h3>Contributions.</h3>
         <p>
           As Team Lead & Programmer, I facilitated communication between the Product Owner and the
@@ -70,7 +70,7 @@ import SimpleLink from '@/components/SimpleLink.vue'
             installation
           </li>
         </ul>
-      </VerticalBox>
+      </VerticalFlexBox>
       <img
         :src="getMediaUrl('VR Research', `/giantwalkthroughmouth/GWMMouthFront.png`)"
         alt="A large 3D model of a set of human teeth displayed in a virtual environment, shown from the front. The model includes detailed white teeth and gums, surrounded by a viewing balcony."
@@ -80,7 +80,7 @@ import SimpleLink from '@/components/SimpleLink.vue'
 
     <!-- Info Panels -->
     <FlexContainer>
-      <VerticalBox>
+      <VerticalFlexBox>
         <h3 id="info-panels">Info Panels.</h3>
         <h4>Description.</h4>
         <p>
@@ -103,7 +103,7 @@ import SimpleLink from '@/components/SimpleLink.vue'
           previous project using PUN 2 (See <SimpleLink href="dentalab">DentaLab</SimpleLink>), so
           my knowledge carried over!
         </p>
-      </VerticalBox>
+      </VerticalFlexBox>
 
       <video controls muted>
         <source
@@ -114,25 +114,25 @@ import SimpleLink from '@/components/SimpleLink.vue'
         Your browser does not support the video tag.
       </video>
 
-      <VerticalBox class="gist-wrapper" style="width: 100%">
+      <VerticalFlexBox class="gist-wrapper" style="width: 100%">
         <h4 id="source-canvasmanager">MultiplayerCanvasManager.cs.</h4>
         <div class="gist-wrapper" style="width: 100%">
           <GistCanvasManager />
         </div>
-      </VerticalBox>
+      </VerticalFlexBox>
 
-      <VerticalBox class="gist-wrapper" style="width: 100%">
+      <VerticalFlexBox class="gist-wrapper" style="width: 100%">
         <h4 id="source-toothmanager">MultiplayerToothManager.cs.</h4>
         <div class="gist-wrapper" style="width: 100%">
           <GistToothManager />
         </div>
-      </VerticalBox>
+      </VerticalFlexBox>
     </FlexContainer>
     <hr />
 
     <!-- Magnifying Glass -->
     <FlexContainer>
-      <VerticalBox>
+      <VerticalFlexBox>
         <h3 id="magnifying-glass">Magnifying Glass.</h3>
         <h4>Description.</h4>
         <p>
@@ -146,7 +146,7 @@ import SimpleLink from '@/components/SimpleLink.vue'
           execute in VR. Thankfully, the “Multi Pass” Stereo Rendering Mode allowed these custom
           stencil shaders to be visible in both eyes.
         </p>
-      </VerticalBox>
+      </VerticalFlexBox>
 
       <video controls muted>
         <source
@@ -157,19 +157,19 @@ import SimpleLink from '@/components/SimpleLink.vue'
         Your browser does not support the video tag.
       </video>
 
-      <VerticalBox class="gist-wrapper" style="width: 100%">
+      <VerticalFlexBox class="gist-wrapper" style="width: 100%">
         <h4 id="source-canvasmanager">RootCanal.shader.</h4>
         <div class="gist-wrapper" style="width: 100%">
           <GistRootCanal />
         </div>
-      </VerticalBox>
+      </VerticalFlexBox>
 
-      <VerticalBox class="gist-wrapper" style="width: 100%">
+      <VerticalFlexBox class="gist-wrapper" style="width: 100%">
         <h4 id="source-toothmanager">Portal.shader.</h4>
         <div class="gist-wrapper" style="width: 100%">
           <GistPortal />
         </div>
-      </VerticalBox>
+      </VerticalFlexBox>
     </FlexContainer>
   </main>
 </template>
