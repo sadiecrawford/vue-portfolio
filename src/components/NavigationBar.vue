@@ -22,7 +22,7 @@
 
 <style scoped>
 .navbar {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   z-index: 1;
   margin: 0 auto;
   padding: 1rem;
@@ -32,11 +32,11 @@
 }
 
 .navbar-container {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
   gap: calc(var(--global-layout-gutter) / 2);
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   margin: 0 auto;
   max-width: var(--global-layout-size);
 }

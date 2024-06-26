@@ -9,17 +9,17 @@ const router = createRouter({
       component: () => import('@views/HomeView.vue')
     },
     {
-      path: '/unmasked',
+      path: '/work/unmasked',
       name: 'Unmasked',
       component: () => import('@work/UnmaskedView.vue')
     },
     {
-      path: '/hush',
+      path: '/work/hush',
       name: 'Hush',
       component: () => import('@work/HushView.vue')
     },
     {
-      path: '/giantwalkthroughmouth',
+      path: '/work/giantwalkthroughmouth',
       name: 'Giant Walkthrough Mouth',
       component: () => import('@work/GiantWalkthroughMouth.vue')
     },

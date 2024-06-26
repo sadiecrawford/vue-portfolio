@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import '@components/VerticalBox.vue'
-</script>
-
 <template>
   <div class="center-wrapper">
     <VerticalBox>
@@ -15,17 +11,15 @@ import '@components/VerticalBox.vue'
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  name: 'TextBlock',
-  props: {
-    title: {
-      type: String,
-      required: true
-    }
-  },
-  methods: {}
-}
+<script setup lang="ts">
+import '@components/VerticalBox.vue'
+
+defineProps({
+  title: {
+    type: String,
+    required: true
+  }
+})
 </script>
 
 <style scoped>

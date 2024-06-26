@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import VerticalBox from '@components/VerticalBox.vue'
 import PortfolioHeader from '@portfolio/PortfolioHeader.vue'
-import FlexBox from '@common/FlexBox.vue'
-import { getImageUrl } from '@utils/imageUtils'
+import FlexContainer from '@common/FlexContainer.vue'
+import { getMediaUrl } from '@utils/mediaUtils'
 import GistToothManager from '@portfolio/giantwalkthroughmouth/GistToothManager.vue'
 import GistCanvasManager from '@portfolio/giantwalkthroughmouth/GistCanvasManager.vue'
 import GistRootCanal from '@portfolio/giantwalkthroughmouth/GistRootCanal.vue'
@@ -20,7 +20,7 @@ import SimpleLink from '@/components/SimpleLink.vue'
     </PortfolioHeader>
 
     <!-- Description -->
-    <FlexBox>
+    <FlexContainer>
       <VerticalBox>
         <h3>Description.</h3>
         <p>
@@ -35,17 +35,17 @@ import SimpleLink from '@/components/SimpleLink.vue'
 
       <video autoplay controls muted>
         <source
-          :src="getImageUrl('VR Research', `/giantwalkthroughmouth/GWMTrailer.mp4`)"
+          :src="getMediaUrl('VR Research', `/giantwalkthroughmouth/GWMTrailer.mp4`)"
           alt="Trailer for 'Giant Walkthrough Mouth' VR experience, showcasing a museum-like exhibit of an enormously scaled human mouth."
           type="video/mp4"
         />
         Your browser does not support the video tag.
       </video>
-    </FlexBox>
+    </FlexContainer>
     <hr />
 
     <!-- Contributions -->
-    <FlexBox>
+    <FlexContainer>
       <VerticalBox>
         <h3>Contributions.</h3>
         <p>
@@ -72,14 +72,14 @@ import SimpleLink from '@/components/SimpleLink.vue'
         </ul>
       </VerticalBox>
       <img
-        :src="getImageUrl('VR Research', `/giantwalkthroughmouth/GWMMouthFront.png`)"
+        :src="getMediaUrl('VR Research', `/giantwalkthroughmouth/GWMMouthFront.png`)"
         alt="A large 3D model of a set of human teeth displayed in a virtual environment, shown from the front. The model includes detailed white teeth and gums, surrounded by a viewing balcony."
       />
-    </FlexBox>
+    </FlexContainer>
     <hr />
 
     <!-- Info Panels -->
-    <FlexBox>
+    <FlexContainer>
       <VerticalBox>
         <h3 id="info-panels">Info Panels.</h3>
         <h4>Description.</h4>
@@ -107,7 +107,7 @@ import SimpleLink from '@/components/SimpleLink.vue'
 
       <video controls muted>
         <source
-          :src="getImageUrl('VR Research', `/giantwalkthroughmouth/GWMInformationPanels.mp4`)"
+          :src="getMediaUrl('VR Research', `/giantwalkthroughmouth/GWMInformationPanels.mp4`)"
           alt="A video demonstrating the exhibit's information panel. The user clicks on a tooth, opens that tooth's description, 3D model, root canal, video, and histology."
           type="video/mp4"
         />
@@ -127,10 +127,11 @@ import SimpleLink from '@/components/SimpleLink.vue'
           <GistToothManager />
         </div>
       </VerticalBox>
-    </FlexBox>
+    </FlexContainer>
+    <hr />
 
     <!-- Magnifying Glass -->
-    <FlexBox>
+    <FlexContainer>
       <VerticalBox>
         <h3 id="magnifying-glass">Magnifying Glass.</h3>
         <h4>Description.</h4>
@@ -149,7 +150,7 @@ import SimpleLink from '@/components/SimpleLink.vue'
 
       <video controls muted>
         <source
-          :src="getImageUrl('VR Research', `/giantwalkthroughmouth/GWMMagnifyingGlass.mp4`)"
+          :src="getMediaUrl('VR Research', `/giantwalkthroughmouth/GWMMagnifyingGlass.mp4`)"
           alt="A video demonstrating the exhibit's magnifying glass tool. As the player moves the magnifying glass across the 3D tooth model, the root canal of that tooth is seen."
           type="video/mp4"
         />
@@ -169,12 +170,12 @@ import SimpleLink from '@/components/SimpleLink.vue'
           <GistPortal />
         </div>
       </VerticalBox>
-    </FlexBox>
+    </FlexContainer>
   </main>
 </template>
 
 <style scoped>
-.flex-grid > div {
+.flex-container > div {
   width: 580px;
 }
 </style>

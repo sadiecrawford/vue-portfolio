@@ -1,47 +1,43 @@
-<script setup lang="ts">
-import { Category } from '@enums/category.enum'
-import { getImageUrl } from '@utils/imageUtils'
-</script>
-
 <template>
   <li style="margin: 8px">
-    <a class="hidden" :href="target">
-      <img
-        :src="getImageUrl(category, `/${target}/${imageSrc}`)"
-        :alt="imageDesc"
-        class="static-image"
-      />
+    <a class="hidden" :href="absoluteTargetUrl">
+      <img :src="absoluteImageUrl" :alt="imageDesc" class="static-image" />
     </a>
   </li>
 </template>
 
-<script lang="ts">
-export default {
-  name: 'PortfolioPreview',
-  props: {
-    category: {
-      type: String,
-      required: true,
-      default: Category.Games,
-      validator: (value: string) => {
-        return Object.values(Category).includes(value as Category)
-      }
-    },
-    imageSrc: {
-      type: String,
-      required: true
-    },
-    imageDesc: {
-      type: String,
-      required: false
-    },
-    target: {
-      type: String,
-      required: true
+<script setup lang="ts">
+import { Category } from '@enums/category.enum'
+import { getMediaUrl } from '@utils/mediaUtils'
+import { computed } from 'vue'
+
+const props = defineProps({
+  category: {
+    type: String,
+    required: true,
+    default: Category.Games,
+    validator: (value: string) => {
+      return Object.values(Category).includes(value as Category)
     }
   },
-  methods: {}
-}
+  imageSrc: {
+    type: String,
+    required: true
+  },
+  imageDesc: {
+    type: String,
+    required: false
+  },
+  target: {
+    type: String,
+    required: true
+  }
+})
+
+const absoluteTargetUrl = computed(() => `/work/${props.target}`)
+const absoluteImageUrl = computed(() =>
+  getMediaUrl(props.category, `/${props.target}/${props.imageSrc}`)
+)
 </script>
 
 <style scoped>

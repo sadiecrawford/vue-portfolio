@@ -16,6 +16,8 @@
     "bottom",
     "left",
     "display",
+    "flex-wrap",
+    "flex-direction",
     "align-items",
     "justify",
     "justify-content",

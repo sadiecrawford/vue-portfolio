@@ -3,9 +3,9 @@ import '@components/VerticalBox.vue'
 </script>
 
 <template>
-  <div class="center-wrapper" style="margin-bottom: 1rem">
+  <div class="center-wrapper">
     <VerticalBox>
-      <h1 class="center-wrapper" style="margin-bottom: 1rem">{{ title }}</h1>
+      <h1 class="center-wrapper">{{ title }}</h1>
       <p style="text-align: center">
         <slot></slot>
       </p>
@@ -13,8 +13,6 @@ import '@components/VerticalBox.vue'
     </VerticalBox>
   </div>
 </template>
-
-<style scoped></style>
 
 <script lang="ts">
 export default {
@@ -28,3 +26,9 @@ export default {
   methods: {}
 }
 </script>
+
+<style scoped>
+.center-wrapper {
+  margin-bottom: 1rem;
+}
+</style>
