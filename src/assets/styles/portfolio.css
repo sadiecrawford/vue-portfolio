@@ -46,9 +46,9 @@
   height: auto;
 }
 
-.portfolio-hr {
-  align-self: center;
-  width: 80%;
+.portfolio hr {
+  margin-inline: 2rem;
+  width: auto;
 }
 
 .video {

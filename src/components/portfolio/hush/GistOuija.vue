@@ -1,9 +1,6 @@
 <script setup lang="ts"></script>
 
 <template>
-  <body></body>
-  <link rel="stylesheet" href="../../src/assets/styles/gist.css" />
-
   <div class="gist">
     <div
       class="gist-file"

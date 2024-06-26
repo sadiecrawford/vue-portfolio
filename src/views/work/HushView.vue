@@ -41,7 +41,7 @@ import SimpleLink from '@components/SimpleLink.vue'
         </video>
       </FlexBox>
 
-      <hr class="portfolio-hr" />
+      <hr />
 
       <!-- Contributions -->
       <FlexBox>
@@ -73,7 +73,7 @@ import SimpleLink from '@components/SimpleLink.vue'
         />
       </FlexBox>
 
-      <hr class="portfolio-hr" />
+      <hr />
 
       <!-- Ouija Board -->
       <FlexBox>
@@ -136,7 +136,7 @@ import SimpleLink from '@components/SimpleLink.vue'
         </VerticalBox>
       </FlexBox>
 
-      <hr class="portfolio-hr" />
+      <hr />
 
       <!-- State Changes -->
       <FlexBox>

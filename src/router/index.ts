@@ -19,6 +19,11 @@ const router = createRouter({
       component: () => import('@work/HushView.vue')
     },
     {
+      path: '/giantwalkthroughmouth',
+      name: 'Giant Walkthrough Mouth',
+      component: () => import('@work/GiantWalkthroughMouth.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting

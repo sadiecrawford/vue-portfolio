@@ -40,7 +40,7 @@ import { getImageUrl } from '@utils/imageUtils'
         </video>
       </FlexBox>
 
-      <hr class="portfolio-hr" />
+      <hr />
 
       <!-- Contributions -->
       <FlexBox>
@@ -71,7 +71,7 @@ import { getImageUrl } from '@utils/imageUtils'
         />
       </FlexBox>
 
-      <hr class="portfolio-hr" />
+      <hr />
 
       <!-- Gameplay -->
       <FlexBox style="justify-content: space-around; padding-inline: 2rem; align-content: center">
