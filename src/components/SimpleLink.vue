@@ -29,6 +29,7 @@ export default {
 
 .simple-link {
   text-decoration: underline;
+  line-height: 1.8rem;
   text-align: center;
 }
 </style>

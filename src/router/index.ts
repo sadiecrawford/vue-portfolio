@@ -24,6 +24,11 @@ const router = createRouter({
       component: () => import('@work/GiantWalkthroughMouth.vue')
     },
     {
+      path: '/work/dentalab',
+      name: 'DentaLab',
+      component: () => import('@work/DentaLab.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
