@@ -6,7 +6,7 @@ import '@common/VerticalFlexBox.vue'
   <div class="center-wrapper">
     <VerticalFlexBox>
       <h1 class="center-wrapper">{{ title }}</h1>
-      <p style="text-align: center; margin-inline: 6rem">
+      <p style="margin-inline: 6rem">
         <slot></slot>
       </p>
       <hr />
@@ -30,5 +30,10 @@ export default {
 <style scoped>
 .center-wrapper {
   margin-bottom: 1rem;
+}
+
+p,
+h1 {
+  text-align: center;
 }
 </style>

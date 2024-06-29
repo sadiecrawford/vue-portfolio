@@ -29,6 +29,11 @@ const router = createRouter({
       component: () => import('@work/DentaLab.vue')
     },
     {
+      path: '/work/ustaa',
+      name: 'USTAA',
+      component: () => import('@work/USTAA.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
