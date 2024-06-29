@@ -34,6 +34,11 @@ const router = createRouter({
       component: () => import('@work/USTAA.vue')
     },
     {
+      path: '/work/lfg',
+      name: 'LFG',
+      component: () => import('@work/LFG.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
