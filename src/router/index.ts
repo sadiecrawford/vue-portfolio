@@ -9,6 +9,11 @@ const router = createRouter({
       component: () => import('@views/HomeView.vue')
     },
     {
+      path: '/work/dda',
+      name: 'Dungeon Defenders: Awakened',
+      component: () => import('@work/DDA.vue')
+    },
+    {
       path: '/work/ddgr',
       name: 'Dungeon Defenders: Going Rogue',
       component: () => import('@work/DDGR.vue')

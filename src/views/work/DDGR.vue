@@ -99,11 +99,19 @@
         </video>
 
         <VerticalFlexBox>
-          <h3>Moving Core.</h3>
+          <h3>Gameplay.</h3>
           <p>
-            This is one of the many gameplay elements I had the opportunity to create! In true
-            Dungeon Defenders fashion, players must keep their Core alive. This game mode is an
-            escort mission where you fight mobs at checkpoints while defending the Core.
+            The Moving Core mode is one of the many gameplay elements I had the opportunity to
+            create! In true Dungeon Defenders fashion, players must keep their Core alive. This game
+            mode is an escort mission where you fight mobs at checkpoints while defending the Core
+            and clearing its path. I also contributed heavily to DDGR's Arena modes, creating the
+            battle arena, patrolling enemy AI, and a spider mini-boss. Here are the
+            <SimpleLink
+              href="https://store.steampowered.com/news/app/1815530/view/3685672555999799832"
+              target="_blank"
+              >patch notes</SimpleLink
+            >
+            if you're curious!
           </p>
         </VerticalFlexBox>
 
@@ -115,11 +123,18 @@
           />
           Your browser does not support the video tag.
         </video>
+
+        <p>
+          Additionally, during this time, I was primarily focused on an internal, unreleased VR
+          project, spending the majority of my development efforts and time inside a VR headset.
+          This included developing engaging combat and intuitive UI/UX experiences for virtual
+          reality gameplay.
+        </p>
       </GridBox>
     </VerticalFlexBox>
     <!-- END Moving Core -->
 
-    <AttributeFooter>Developed by Chromatic Games</AttributeFooter>
+    <AttributeFooter>All rights and trademarks are owned by Chromatic Games.</AttributeFooter>
   </main>
 </template>
 
