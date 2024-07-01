@@ -22,12 +22,12 @@
 
 <style scoped>
 .navbar {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  box-shadow: 0 0.125rem 0.4rem rgba(0, 0, 0, 1);
+  backdrop-filter: blur(20px);
   margin: 0 auto;
   padding: 1rem;
   width: 100%;
-  background-color: var(--global-color-neutral-100);
+  background-color: var(--global-color-neutral-100) / 0.75;
   animation: var(--global-animation-fade-down);
 }
 

@@ -4,7 +4,7 @@ import NavigationBar from '@components/NavigationBar.vue'
 </script>
 
 <template>
-  <header>
+  <header style="z-index: 1">
     <NavigationBar />
   </header>
   <RouterView />

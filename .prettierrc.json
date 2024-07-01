@@ -28,6 +28,8 @@
     "margin-inline",
     "outline",
     "border",
+    "border-color",
+    "border-width",
     "border-radius",
     "padding",
     "padding-inline",
