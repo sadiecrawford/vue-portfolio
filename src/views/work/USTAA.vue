@@ -90,7 +90,7 @@ const state = reactive({
   ] as [string, string][]
 })
 
-const imageData = computed(() => {
+const imageData = computed<[string, string][]>(() => {
   return state.partialImageData.map(([partialUrl, altDescription]) => [
     getMediaUrl('Software', `/ustaa/${partialUrl}`),
     altDescription

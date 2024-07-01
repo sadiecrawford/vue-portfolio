@@ -161,7 +161,7 @@ const state = reactive({
   ] as [string, string, string][]
 })
 
-const imageData = computed(() => {
+const imageData = computed<[string, string, string][]>(() => {
   return state.partialImageData.map(([partialUrlBefore, partialUrlAfter, altDescription]) => [
     getMediaUrl('Games', `/ddgr/${partialUrlBefore}`),
     getMediaUrl('Games', `/ddgr/${partialUrlAfter}`),
