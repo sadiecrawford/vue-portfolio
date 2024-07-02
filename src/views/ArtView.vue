@@ -30,11 +30,6 @@ const imageData = [
     'Self Portrait [Maya, Substance, & XGen]'
   ],
   [
-    'Porcupine.jpg',
-    'An acrylic painting of a vivid, rainbow porcupine',
-    'A re-interpretation of the "Prehensile-tailed porcupine" by Slaveika Aladjova using bright colors [acrylic]'
-  ],
-  [
     'ThroughTheForest.png',
     "A watercolor painting of a jumping deer with trees painted within the deer's shadows",
     'Through the Forest [watercolor]'
@@ -48,6 +43,11 @@ const imageData = [
     'HumanEye.png',
     'A digital drawing of a single human eye',
     'A human eye. Drawn in digital art course taught by Austin and Jaysen Batchelor [Photoshop]'
+  ],
+  [
+    'Porcupine.jpg',
+    'An acrylic painting of a vivid, rainbow porcupine',
+    'A re-interpretation of the "Prehensile-tailed porcupine" by Slaveika Aladjova using bright colors [acrylic]'
   ]
 ] as [string, string, string][]
 </script>

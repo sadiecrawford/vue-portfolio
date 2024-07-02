@@ -32,10 +32,10 @@ const props = defineProps<{
 }>()
 
 const firstImages = computed<[string, string, string][]>(() =>
-  props.imageData.slice(0, Math.ceil(props.imageData.length / 2))
+  props.imageData.slice(0, Math.ceil(props.imageData.length / 2) + 1)
 )
 const secondImages = computed<[string, string, string][]>(() =>
-  props.imageData.slice(Math.ceil(props.imageData.length / 2))
+  props.imageData.slice(Math.ceil(props.imageData.length / 2) + 1)
 )
 </script>
 

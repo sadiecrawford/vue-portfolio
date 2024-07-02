@@ -9,21 +9,25 @@
       <VerticalFlexBox style="margin: 1.8rem">
         <h3>About.</h3>
         <p>
-          With what started as a Python-coding competition in an AP Physics class, Sadie recognized
-          her enjoyment in coding. Sparked by this interest, she pursued a degree in Computer
-          Science at the University of Florida. Since then, she has been collaborating with a
-          diverse group of people, from machinists and knife makers to a startup focused on
-          harnessing the power of fireflies' bioluminescent chemicals. Meanwhile, continuing her
-          education at the Digital Worlds Institute, she began diving into the beginnings of the
-          virtual reality metaverse. Upon completing her Masters, she has continued to construct
-          these awe-inspiring worlds with Chromatic Games.
+          It all started with a Python-coding competition in an AP Physics class, where Sadie first
+          discovered her love for coding. This spark led her to the University of Florida, where she
+          dove headfirst into a Computer Science degree. But Sadie's journey didn't stop there.
+          She's worked alongside an eclectic mix of professionals—machinists, knife makers, and even
+          a startup obsessed with harnessing the glow of fireflies.
+          <br />
+          Her curiosity pulled her into the Digital Worlds Institute, where she explored the early
+          realms of the virtual reality metaverse. Now, armed with a Master's degree, she's crafting
+          awe-inspiring worlds and experiences with Chromatic Games. Her adoration for game
+          development has flourished in the titles <i>Dungeon Defenders: Going Rogue</i>,
+          <i>Dungeon Defenders: Awakened</i>, and numerous internal projects.
         </p>
         <br />
         <strong>Interests.</strong>
         <p>Knitting, bird watching, books, raising farm animals</p>
         <strong>Favorite Games!</strong>
         <p>
-          Outer Wilds, Bioshock, Moss, Labyrinthine, Phasmophobia, World of Warcraft, Inscryption
+          Outer Wilds, Bioshock, Moss, Labyrinthine, Phasmophobia, World of Warcraft, Inscryption,
+          Baldur's Gate 3
         </p>
       </VerticalFlexBox>
     </div>
@@ -62,5 +66,6 @@ p {
 
 strong {
   margin-inline: 0rem;
+  padding-inline: 0rem;
 }
 </style>
