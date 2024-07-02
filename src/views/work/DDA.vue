@@ -25,7 +25,7 @@
 
       <video controls muted autoplay>
         <source
-          :src="getMediaUrl('Games', '/dda/DDATrailer.mp4')"
+          :src="getMediaUrl('/dda/DDATrailer.mp4', 'Games')"
           alt="A trailer of Chromatic Games' 'Dungeon Defenders: Awakened'"
           type="video/mp4"
         />
@@ -59,7 +59,7 @@
         </ul>
       </VerticalFlexBox>
       <img
-        :src="getMediaUrl('Games', `/dda/DDATavernStash.png`)"
+        :src="getMediaUrl('/dda/DDATavernStash.png', 'Games')"
         alt="The hero 'EV' kneeling down to open the Tavern Stash, a chest that emanates light from its keyhole."
       />
     </FlexContainer>
@@ -72,13 +72,13 @@
         <div class="stove-container">
           <img
             style="margin-right: 36px"
-            :src="getMediaUrl('Games', '/dda/DDAStoveIconBackground.png')"
+            :src="getMediaUrl('/dda/DDAStoveIconBackground.png', 'Games')"
             aria-hidden="true"
           />
           <div class="gradient" aria-hidden="true"></div>
           <img
             style="left: 36px"
-            :src="getMediaUrl('Games', '/dda/DDAStoveIconForeground.png')"
+            :src="getMediaUrl('/dda/DDAStoveIconForeground.png', 'Games')"
             alt="The banner for DDA on the Smilegate Stove platform in Korea"
           />
         </div>
@@ -100,7 +100,7 @@
       <GridBox style="margin: 1.8rem">
         <video controls muted autoplay loop>
           <source
-            :src="getMediaUrl('Games', '/dda/DDAEmporiumSlotsAndStash.mp4')"
+            :src="getMediaUrl('/dda/DDAEmporiumSlotsAndStash.mp4', 'Games')"
             alt="A player purchases Gems and the Prismatic Core in the Emporium cosmetic store and uses the Prismatic Core in their default transmog"
             type="video/mp4"
           />
@@ -108,7 +108,7 @@
         </video>
         <video controls muted autoplay loop>
           <source
-            :src="getMediaUrl('Games', '/dda/DDAEmporiumCore.mp4')"
+            :src="getMediaUrl('/dda/DDAEmporiumCore.mp4', 'Games')"
             alt="A player purchases a hero deck slot and 200 Tavern Stash slots in the Emporium store"
             type="video/mp4"
           />
@@ -125,7 +125,7 @@
       <GridBox>
         <img
           style="left: 36px"
-          :src="getMediaUrl('Games', '/dda/DDASplitscreen.png')"
+          :src="getMediaUrl('/dda/DDASplitscreen.png', 'Games')"
           alt="The banner for DDA on the Smilegate Stove platform in Korea"
         />
 

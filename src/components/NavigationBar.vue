@@ -4,16 +4,16 @@
       <a href="/" class="navbar-logo">Sadie Crawford</a>
       <ul class="navbar-menu">
         <li class="navbar-item">
-          <a href="#work" class="navbar-link">Work</a>
+          <a href="/" class="navbar-link">Work</a>
         </li>
         <li class="navbar-item">
-          <a href="#art" class="navbar-link">Art</a>
+          <a href="/art" class="navbar-link">Art</a>
         </li>
         <li class="navbar-item">
-          <a href="#about" class="navbar-link">About</a>
+          <a href="/about" class="navbar-link">About</a>
         </li>
         <li class="navbar-item">
-          <a href="#resume" class="navbar-link">Resume</a>
+          <a href="/resume" class="navbar-link">Resume</a>
         </li>
       </ul>
     </div>

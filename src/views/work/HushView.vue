@@ -32,7 +32,7 @@ import SimpleLink from '@components/SimpleLink.vue'
 
       <video autoplay controls muted>
         <source
-          :src="getMediaUrl('Games', `/hush/HushTrailer.mp4`)"
+          :src="getMediaUrl('/hush/HushTrailer.mp4', 'Games')"
           alt="A spooky, preview trailer for the game 'Hush' showcasing a dark library with a Ouija board and a fuse box."
           type="video/mp4"
         />
@@ -66,7 +66,7 @@ import SimpleLink from '@components/SimpleLink.vue'
         </ul>
       </VerticalFlexBox>
       <img
-        :src="getMediaUrl('Games', `/hush/HushUpstairs.png`)"
+        :src="getMediaUrl('/hush/HushUpstairs.png', 'Games')"
         alt="A dimly lit library with wooden shelves, a candle-lit desk, and red-patterned wallpaper from the video game 'Hush'"
       />
     </FlexContainer>
@@ -107,14 +107,14 @@ import SimpleLink from '@components/SimpleLink.vue'
       <VerticalFlexBox>
         <video controls muted>
           <source
-            :src="getMediaUrl('Games', `/hush/HushOuija.mp4`)"
+            :src="getMediaUrl('/hush/HushOuija.mp4', 'Games')"
             alt="A video demonstrating the game 'Hush's' ouija board puzzle, where the plancette spells out 'DANGER' as it is also written on the chalkboard"
             type="video/mp4"
           />
           Your browser does not support the video tag.
         </video>
         <img
-          :src="getMediaUrl('Games', `/hush/HushOuija.jpg`)"
+          :src="getMediaUrl('/hush/HushOuija.jpg', 'Games')"
           alt="A dimly lit scene with a Ouija board on a table, a white candle, and Unreal Engine's UI elements."
         />
       </VerticalFlexBox>
@@ -158,7 +158,7 @@ import SimpleLink from '@components/SimpleLink.vue'
 
       <video controls muted>
         <source
-          :src="getMediaUrl('Games', `/hush/HushStateChanges.mp4`)"
+          :src="getMediaUrl('/hush/HushStateChanges.mp4', 'Games')"
           alt="A video demonstrating the game 'Hush's' state changes. In unison with the clock chimes, the portrait painting changes from an old man, to a slightly younger version of the man wearing a necklace, to a young version of the same, and finally to images of hands grasping to escape from the frame. Additionally, the player's hands progressively become older and more frail looking."
           type="video/mp4"
         />

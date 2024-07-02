@@ -31,7 +31,7 @@ import { getMediaUrl } from '@utils/mediaUtils'
 
       <video autoplay controls muted>
         <source
-          :src="getMediaUrl('Games', `/unmasked/UnmaskedTrailer.mp4`)"
+          :src="getMediaUrl('/unmasked/UnmaskedTrailer.mp4', 'Games')"
           alt="A spooky, preview trailer for the game 'Unmasked'"
           type="video/mp4"
         />
@@ -63,7 +63,7 @@ import { getMediaUrl } from '@utils/mediaUtils'
       </VerticalFlexBox>
 
       <img
-        :src="getMediaUrl('Games', `/unmasked/UnmaskedAward1.png`)"
+        :src="getMediaUrl('/unmasked/UnmaskedAward1.png', 'Games')"
         alt="Sadie Crawford, Charlotte Atwill, Seung Hyuk Jang (professor), and Daniel Briz (left to right) holding awards for 'Best MiDAS Capstone'"
       />
     </FlexContainer>
@@ -79,7 +79,7 @@ import { getMediaUrl } from '@utils/mediaUtils'
           <h3>Seasons Puzzle.</h3>
           <video controls muted>
             <source
-              :src="getMediaUrl('Games', `/unmasked/UnmaskedSeasonsPuzzle.mp4`)"
+              :src="getMediaUrl('/unmasked/UnmaskedSeasonsPuzzle.mp4', 'Games')"
               alt="A video showing the 'Seasons' puzzle, where the player goes into the past of winter to plant and water seeds. Upon returning to the future of summer, the seeds have grown into corn."
               type="video/mp4"
             />
@@ -90,7 +90,7 @@ import { getMediaUrl } from '@utils/mediaUtils'
           <h3>Rope Physics.</h3>
           <video controls muted>
             <source
-              :src="getMediaUrl('Games', `/unmasked/UnmaskedRopePhysics.mp4`)"
+              :src="getMediaUrl('/unmasked/UnmaskedRopePhysics.mp4', 'Games')"
               alt="A demonstration of rope physics in the VR game 'Unmasked.'"
               type="video/mp4"
             />
@@ -101,7 +101,7 @@ import { getMediaUrl } from '@utils/mediaUtils'
 
       <img
         style="align-self: center; width: 500px; margin-top: 2.5rem"
-        :src="getMediaUrl('Games', `/unmasked/UnmaskedConvergence.png`)"
+        :src="getMediaUrl('/unmasked/UnmaskedConvergence.png', 'Games')"
         alt="Seung Hyuk Jang (professor), Sadie Crawford, and Charlotte Atwill (left to right) standing next to an 'Unmasked' banner at University of Florida's 2022 Convergence event"
       />
     </FlexContainer>

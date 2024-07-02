@@ -24,7 +24,7 @@
 
       <video controls muted autoplay>
         <source
-          :src="getMediaUrl('Games', '/ddgr/DDGRTrailer.mp4')"
+          :src="getMediaUrl('/ddgr/DDGRTrailer.mp4', 'Games')"
           alt="A trailer of Chromatic Games' 'Dungeon Defenders: Going Rogue'"
           type="video/mp4"
         />
@@ -39,8 +39,8 @@
     <VerticalFlexBox>
       <GridBox>
         <ComparisonImage
-          :firstImgUrl="getMediaUrl('Games', '/ddgr/DDGRHeroInfo_Before.png')"
-          :secondImgUrl="getMediaUrl('Games', '/ddgr/DDGRHeroInfo_After.png')"
+          :firstImgUrl="getMediaUrl('/ddgr/DDGRHeroInfo_Before.png', 'Games')"
+          :secondImgUrl="getMediaUrl('/ddgr/DDGRHeroInfo_After.png', 'Games')"
           :startPercentage="50"
         >
         </ComparisonImage>
@@ -91,7 +91,7 @@
       <GridBox>
         <video autoplay controls muted loop>
           <source
-            :src="getMediaUrl('Games', `/ddgr/DDGRMovingCoreBarrels.mp4`)"
+            :src="getMediaUrl('/ddgr/DDGRMovingCoreBarrels.mp4', 'Games')"
             alt="The Huntress shooting barrels that are blocking the Moving Core\'s path."
             type="video/mp4"
           />
@@ -117,7 +117,7 @@
 
         <video autoplay controls muted loop>
           <source
-            :src="getMediaUrl('Games', `/ddgr/DDGRMovingCoreVictory.mp4`)"
+            :src="getMediaUrl('/ddgr/DDGRMovingCoreVictory.mp4', 'Games')"
             alt="A player watching the Moving Core reach the end goal and achieve a Victory."
             type="video/mp4"
           />
@@ -178,8 +178,8 @@ const state = reactive({
 
 const imageData = computed<[string, string, string][]>(() => {
   return state.partialImageData.map(([partialUrlBefore, partialUrlAfter, altDescription]) => [
-    getMediaUrl('Games', `/ddgr/${partialUrlBefore}`),
-    getMediaUrl('Games', `/ddgr/${partialUrlAfter}`),
+    getMediaUrl(`/ddgr/${partialUrlBefore}`, 'Games'),
+    getMediaUrl(`/ddgr/${partialUrlAfter}`, 'Games'),
     altDescription
   ])
 })

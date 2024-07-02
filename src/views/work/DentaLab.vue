@@ -76,7 +76,7 @@ import GistToExamRoom from '@portfolio/dentalab/GistToExamRoom.vue'
         </ul>
       </VerticalFlexBox>
       <img
-        :src="getMediaUrl('VR Research', `/dentalab/DentaLabExamRoom.jpg`)"
+        :src="getMediaUrl('/dentalab/DentaLabExamRoom.jpg', 'VR Research')"
         alt="A virtual, dental exam room with a patient lying on the exam table."
       />
     </FlexContainer>
@@ -113,7 +113,7 @@ import GistToExamRoom from '@portfolio/dentalab/GistToExamRoom.vue'
       <VerticalFlexBox>
         <video controls muted style="margin-bottom: 2rem">
           <source
-            :src="getMediaUrl('VR Research', `/dentalab/DentaLabPowerPoint.mp4`)"
+            :src="getMediaUrl('/dentalab/DentaLabPowerPoint.mp4', 'VR Research')"
             alt="A first-person perspective of a teacher in a virtual classroom navigating a PowerPoint presentation with 3D buttons"
             type="video/mp4"
           />
@@ -121,7 +121,7 @@ import GistToExamRoom from '@portfolio/dentalab/GistToExamRoom.vue'
         </video>
         <video controls muted>
           <source
-            :src="getMediaUrl('VR Research', `/dentalab/DentaLabPDFViewer.mp4`)"
+            :src="getMediaUrl('/dentalab/DentaLabPDFViewer.mp4', 'VR Research')"
             alt="A first-person perspective. The player uses a virtual wristband UI to open a PDF viewer that the player holds virtually and moves around the environment"
             type="video/mp4"
           />
@@ -175,14 +175,14 @@ import GistToExamRoom from '@portfolio/dentalab/GistToExamRoom.vue'
       <VerticalFlexBox>
         <video controls muted style="margin-bottom: 2rem">
           <source
-            :src="getMediaUrl('VR Research', `/dentalab/DentaLabWhiteboard.mp4`)"
+            :src="getMediaUrl('/dentalab/DentaLabWhiteboard.mp4', 'VR Research')"
             alt="A first-person perspective of player drawing on a virtual whiteboard saying DentaLab"
             type="video/mp4"
           />
           Your browser does not support the video tag.
         </video>
         <img
-          :src="getMediaUrl('VR Research', `/dentalab/DentaLabWhiteboard.jpg`)"
+          :src="getMediaUrl('/dentalab/DentaLabWhiteboard.jpg', 'VR Research')"
           alt="A user pointing to 3 different colored buttons next to a virtual whiteboard"
         />
       </VerticalFlexBox>
@@ -235,13 +235,13 @@ import GistToExamRoom from '@portfolio/dentalab/GistToExamRoom.vue'
 
       <VerticalFlexBox>
         <img
-          :src="getMediaUrl('VR Research', `/dentalab/DentaLabExamRoomDoor.jpg`)"
+          :src="getMediaUrl('/dentalab/DentaLabExamRoomDoor.jpg', 'VR Research')"
           alt="A virtual environment with a classroom table and a gray door labeled 'Exam Room'"
           style="margin-bottom: 2rem"
         />
         <video controls muted>
           <source
-            :src="getMediaUrl('VR Research', `/dentalab/DentaLabExamAssessment.mp4`)"
+            :src="getMediaUrl('/dentalab/DentaLabExamAssessment.mp4', 'VR Research')"
             alt="A first-person perspective of player navigating to the Exam Room, where they take a dental-related quiz and receive a test score."
             type="video/mp4"
           />

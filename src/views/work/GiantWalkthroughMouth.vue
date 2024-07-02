@@ -35,7 +35,7 @@ import SimpleLink from '@/components/SimpleLink.vue'
 
       <video autoplay controls muted>
         <source
-          :src="getMediaUrl('VR Research', `/giantwalkthroughmouth/GWMTrailer.mp4`)"
+          :src="getMediaUrl('/giantwalkthroughmouth/GWMTrailer.mp4', 'VR Research')"
           alt="Trailer for 'Giant Walkthrough Mouth' VR experience, showcasing a museum-like exhibit of an enormously scaled human mouth."
           type="video/mp4"
         />
@@ -72,7 +72,7 @@ import SimpleLink from '@/components/SimpleLink.vue'
         </ul>
       </VerticalFlexBox>
       <img
-        :src="getMediaUrl('VR Research', `/giantwalkthroughmouth/GWMMouthFront.png`)"
+        :src="getMediaUrl('/giantwalkthroughmouth/GWMMouthFront.png', 'VR Research')"
         alt="A large 3D model of a set of human teeth displayed in a virtual environment, shown from the front. The model includes detailed white teeth and gums, surrounded by a viewing balcony."
       />
     </FlexContainer>
@@ -107,7 +107,7 @@ import SimpleLink from '@/components/SimpleLink.vue'
 
       <video controls muted>
         <source
-          :src="getMediaUrl('VR Research', `/giantwalkthroughmouth/GWMInformationPanels.mp4`)"
+          :src="getMediaUrl('/giantwalkthroughmouth/GWMInformationPanels.mp4', 'VR Research')"
           alt="A video demonstrating the exhibit's information panel. The user clicks on a tooth, opens that tooth's description, 3D model, root canal, video, and histology."
           type="video/mp4"
         />
@@ -150,7 +150,7 @@ import SimpleLink from '@/components/SimpleLink.vue'
 
       <video controls muted>
         <source
-          :src="getMediaUrl('VR Research', `/giantwalkthroughmouth/GWMMagnifyingGlass.mp4`)"
+          :src="getMediaUrl('/giantwalkthroughmouth/GWMMagnifyingGlass.mp4', 'VR Research')"
           alt="A video demonstrating the exhibit's magnifying glass tool. As the player moves the magnifying glass across the 3D tooth model, the root canal of that tooth is seen."
           type="video/mp4"
         />

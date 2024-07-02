@@ -16,6 +16,7 @@ export default defineConfig({
       '@utils': fileURLToPath(new URL('./src/utils', import.meta.url)),
       '@views': fileURLToPath(new URL('./src/views', import.meta.url)),
       '@work': fileURLToPath(new URL('./src/views/work', import.meta.url)),
+      '@misc': fileURLToPath(new URL('./src/views/misc', import.meta.url)),
       '@common': fileURLToPath(new URL('./src/components/common', import.meta.url)),
       '@input': fileURLToPath(new URL('./src/components/input', import.meta.url))
     }

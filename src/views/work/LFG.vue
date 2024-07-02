@@ -21,7 +21,7 @@
       </VerticalFlexBox>
 
       <img
-        :src="getMediaUrl('Software', `/lfg/LFG1.jpg`)"
+        :src="getMediaUrl('/lfg/LFG1.jpg', 'Software')"
         alt="A spreadsheet representation of World of Warcraft forums with the columns 'Character', 'Class', 'ilvl', 'Title', 'Date', and various related World of Warcraft links."
       />
     </FlexContainer>

@@ -22,7 +22,7 @@
       </VerticalFlexBox>
 
       <img
-        :src="getMediaUrl('Software', `/ustaa/USTAA1.jpg`)"
+        :src="getMediaUrl('/ustaa/USTAA1.jpg', 'Software')"
         alt="A landing page for USTAA detailing a number of accident trends numerically and visually"
       />
     </FlexContainer>
@@ -92,7 +92,7 @@ const state = reactive({
 
 const imageData = computed<[string, string][]>(() => {
   return state.partialImageData.map(([partialUrl, altDescription]) => [
-    getMediaUrl('Software', `/ustaa/${partialUrl}`),
+    getMediaUrl(`/ustaa/${partialUrl}`, 'Software'),
     altDescription
   ])
 })

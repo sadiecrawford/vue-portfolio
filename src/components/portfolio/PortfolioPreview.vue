@@ -36,7 +36,7 @@ const props = defineProps({
 
 const absoluteTargetUrl = computed(() => `/work/${props.target}`)
 const absoluteImageUrl = computed(() =>
-  getMediaUrl(props.category, `/${props.target}/${props.imageSrc}`)
+  getMediaUrl(`/${props.target}/${props.imageSrc}`, props.category)
 )
 </script>
 
