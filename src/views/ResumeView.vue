@@ -3,7 +3,7 @@
     <VerticalFlexBox class="center-wrapper">
       <div class="header-container">
         <h1>Resume.</h1>
-        <a class="right-wrapper" :href="getMediaUrl('/Sadie Crawford Resume.pdf')" download
+        <a class="download-position" :href="getMediaUrl('/Sadie Crawford Resume.pdf')" download
           >Download</a
         >
       </div>
@@ -25,25 +25,26 @@ import VerticalFlexBox from '@common/VerticalFlexBox.vue'
 
 <style scoped>
 .header-container {
+  align-content: center;
+  position: relative;
   display: flex;
-  align-items: end;
-  justify-content: space-between;
+  justify-content: center;
   padding-inline: 0.5rem;
   width: 100%;
 }
 
-h1 {
-  margin: 0rem;
+.download-position {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 a {
   align-content: center;
   text-decoration: none;
   margin-bottom: 0.5rem;
-  justify-content: center;
   border-radius: var(--global-border-radius);
   padding: 12px;
-  width: fit-content;
   background-color: var(--global-text-color-hover);
   cursor: pointer;
 }

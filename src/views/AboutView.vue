@@ -1,12 +1,12 @@
 <template>
   <main>
-    <div class="container">
+    <GridBox class="container">
       <img
         :src="getMediaUrl('/SadiePortrait.png')"
         alt="A picture of Sadie sitting in a chunky wooden chair"
       />
 
-      <VerticalFlexBox style="margin: 1.8rem">
+      <VerticalFlexBox>
         <h3>About.</h3>
         <p>
           It all started with a Python-coding competition in an AP Physics class, where Sadie first
@@ -30,29 +30,30 @@
           Baldur's Gate 3
         </p>
       </VerticalFlexBox>
-    </div>
+    </GridBox>
   </main>
 </template>
 
 <script setup lang="ts">
-import VerticalFlexBox from '@/components/common/VerticalFlexBox.vue'
+import VerticalFlexBox from '@common/VerticalFlexBox.vue'
+import GridBox from '@common/GridBox.vue'
 import { getMediaUrl } from '@utils/mediaUtils'
 </script>
 
 <style scoped>
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+.grid-panel {
+  gap: 0rem;
+  margin: 0rem;
 }
 
 img {
   outline-style: solid;
   outline-width: 8px;
   outline-color: var(--global-outline-color-hover);
+  align-self: center;
+  justify-self: center;
   margin: 8px;
-  width: 60%;
+  width: 80%;
 }
 
 h3 {
