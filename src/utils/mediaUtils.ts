@@ -1,6 +1,6 @@
 import { Category } from '@enums/category.enum'
 
-export function getMediaUrl(categoryStr: String, imagePath: string): string {
+export function getMediaUrl(imagePath: string, categoryStr: String = ''): string {
   const category = categoryStr as Category
   switch (category) {
     case Category.Games:
@@ -10,6 +10,6 @@ export function getMediaUrl(categoryStr: String, imagePath: string): string {
     case Category.Software:
       return `${import.meta.env.VITE_SOFTWARE_URL}${imagePath}`
     default:
-      return `${import.meta.env.VITE_PORTFOLIO_URL}${imagePath}`
+      return `${import.meta.env.VITE_MEDIA_URL}${imagePath}`
   }
 }

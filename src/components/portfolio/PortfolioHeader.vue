@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import '@components/VerticalBox.vue'
+import '@common/VerticalFlexBox.vue'
 </script>
 
 <template>
   <div class="center-wrapper">
-    <VerticalBox>
-      <h1 class="center-wrapper">{{ title }}</h1>
-      <p style="text-align: center">
+    <div style="width: fit-content">
+      <h1 style="margin-bottom: 0">{{ title }}</h1>
+      <p>
         <slot></slot>
       </p>
       <hr />
-    </VerticalBox>
+    </div>
   </div>
 </template>
 
@@ -28,7 +28,8 @@ export default {
 </script>
 
 <style scoped>
-.center-wrapper {
-  margin-bottom: 1rem;
+p,
+h1 {
+  text-align: center;
 }
 </style>

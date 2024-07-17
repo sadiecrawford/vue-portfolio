@@ -15,6 +15,8 @@
   --global-color-neutral-900: hsl(222, 10%, 94%);
   --global-color-neutral-1000: hsl(0, 0%, 100%);
 
+  --global-border-radius: 12px;
+
   --global-animation-fade-up: fade-up 0.5s ease-in-out;
   --global-animation-fade-down: fade-down 0.5s ease-in-out;
   --global-animation-expand: expand 0.5s ease-in-out;
@@ -91,14 +93,14 @@ main {
 }
 
 video {
-  border-radius: 12px;
+  border-radius: var(--global-border-radius);
   width: 100%;
   height: auto;
   max-width: 580px;
 }
 
 img {
-  border-radius: 12px;
+  border-radius: var(--global-border-radius);
   width: 100%;
   height: auto;
   max-width: 580px;
@@ -137,6 +139,10 @@ p {
   font-size: 1rem;
   color: var(--global-text-color);
   animation: var(--global-animation-expand);
+}
+
+p.italic {
+  font-style: italic;
 }
 
 strong {

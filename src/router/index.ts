@@ -9,6 +9,16 @@ const router = createRouter({
       component: () => import('@views/HomeView.vue')
     },
     {
+      path: '/work/dda',
+      name: 'Dungeon Defenders: Awakened',
+      component: () => import('@work/DDA.vue')
+    },
+    {
+      path: '/work/ddgr',
+      name: 'Dungeon Defenders: Going Rogue',
+      component: () => import('@work/DDGR.vue')
+    },
+    {
       path: '/work/unmasked',
       name: 'Unmasked',
       component: () => import('@work/UnmaskedView.vue')
@@ -24,12 +34,34 @@ const router = createRouter({
       component: () => import('@work/GiantWalkthroughMouth.vue')
     },
     {
+      path: '/work/dentalab',
+      name: 'DentaLab',
+      component: () => import('@work/DentaLab.vue')
+    },
+    {
+      path: '/work/ustaa',
+      name: 'USTAA',
+      component: () => import('@work/USTAA.vue')
+    },
+    {
+      path: '/work/lfg',
+      name: 'LFG',
+      component: () => import('@work/LFG.vue')
+    },
+    {
+      path: '/resume',
+      name: 'Resume',
+      component: () => import('@views/ResumeView.vue')
+    },
+    {
       path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      name: 'About',
       component: () => import('@views/AboutView.vue')
+    },
+    {
+      path: '/art',
+      name: 'Art',
+      component: () => import('@views/ArtView.vue')
     }
   ]
 })

@@ -29,6 +29,7 @@
 .portfolio p {
   padding-inline: 2rem;
   padding-block: 1.5rem 0.5rem;
+  line-height: 1.8rem;
   text-align: left;
 }
 
@@ -55,4 +56,8 @@
 
 .video {
   margin-bottom: 2rem;
+}
+
+.small-text {
+  font-size: 12px;
 }

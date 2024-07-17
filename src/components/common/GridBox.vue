@@ -13,14 +13,14 @@ export default {
 <style scoped>
 .grid-panel {
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem; /* Adjust the gap between items as needed */
-  list-style: none; /* Removes the default list styling */
+  gap: 1rem;
+  list-style: none;
   display: grid;
   overflow: hidden;
-  padding: 0; /* Removes the default padding */
+  margin-inline: 1.8rem;
+  padding: 0;
 }
 
-/* Adjust to 1 column for small screens */
 @media (max-width: 720px) {
   .grid-panel {
     grid-template-columns: repeat(1, 1fr);
