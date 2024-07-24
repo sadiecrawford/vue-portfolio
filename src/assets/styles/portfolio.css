@@ -61,3 +61,7 @@
 .small-text {
   font-size: 12px;
 }
+
+.fade-up {
+  animation: var(--global-animation-fade-up);
+}
