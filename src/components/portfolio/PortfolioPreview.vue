@@ -1,7 +1,9 @@
 <template>
   <li style="margin: 8px">
     <a class="hidden" :href="absoluteTargetUrl">
-      <img :src="absoluteImageUrl" :alt="imageDesc" class="static-image" />
+      <div class="static-image-box">
+        <img :src="absoluteImageUrl" :alt="imageDesc" class="static-image" />
+      </div>
     </a>
   </li>
 </template>
@@ -45,12 +47,14 @@ li {
   animation: var(--global-animation-fade-up);
 }
 
+.static-image-box {
+  height: 312px;
+}
+
 .static-image {
   outline-color: var(--global-outline-color-hover);
   border-radius: 12px;
   padding: 4px;
-  height: auto; /* Ensures the image scales while maintaining its aspect ratio */
-  max-width: 100%;
   transition: outline 0.1s ease-in-out;
 }
 

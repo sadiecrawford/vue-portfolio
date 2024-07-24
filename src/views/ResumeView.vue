@@ -1,20 +1,22 @@
 <template>
   <main>
-    <VerticalFlexBox class="center-wrapper">
-      <div class="header-container">
-        <h1>Resume.</h1>
-        <a class="download-position" :href="getMediaUrl('/Sadie Crawford Resume.pdf')" download
-          >Download</a
-        >
-      </div>
+    <div class="center-wrapper">
+      <VerticalFlexBox>
+        <div class="header-container">
+          <h1>Resume.</h1>
+          <a class="download-position" :href="getMediaUrl('/Sadie Crawford Resume.pdf')" download
+            >Download</a
+          >
+        </div>
 
-      <embed
-        :src="getMediaUrl('/Sadie Crawford Resume.pdf')"
-        type="application/pdf"
-        width="100%"
-        alt="The resume for Sadie Crawford"
-      />
-    </VerticalFlexBox>
+        <embed
+          :src="getMediaUrl('/Sadie Crawford Resume.pdf')"
+          type="application/pdf"
+          width="100%"
+          alt="The resume for Sadie Crawford"
+        />
+      </VerticalFlexBox>
+    </div>
   </main>
 </template>
 

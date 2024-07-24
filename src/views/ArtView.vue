@@ -1,10 +1,14 @@
 <template>
   <main>
-    <ImageDescGrid :imageData="imageData" />
+    <VerticalFlexBox>
+      <h1 class="center-wrapper">Art.</h1>
+      <ImageDescGrid class="fade-up" :imageData="imageData" />
+    </VerticalFlexBox>
   </main>
 </template>
 
 <script setup lang="ts">
+import VerticalFlexBox from '@common/VerticalFlexBox.vue'
 import ImageDescGrid from '@common/ImageDescGrid.vue'
 
 // Full URLs are calculated

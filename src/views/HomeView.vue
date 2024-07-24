@@ -90,13 +90,13 @@ export default {
           items: [
             {
               target: 'ustaa',
-              previewImg: 'USTAAPreview.jpg',
+              previewImg: 'USTAAPreview.png',
               previewImgDesc:
                 'A screenshot of the website "USTAA" displaying various statistics and graphs'
             },
             {
               target: 'lfg',
-              previewImg: 'LFGPreview.jpg',
+              previewImg: 'LFGPreview.png',
               previewImgDesc:
                 'A screenshot of a spreadsheet displaying game character information with a logo that says "LFG"'
             }
