@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="navbar-container">
-      <a href="/" class="navbar-logo">Sadie Crawford</a>
+      <a href="/" class="navbar-logo"> <h1>Sadie Crawford</h1></a>
       <ul class="navbar-menu">
         <li class="navbar-item">
           <a href="/" class="navbar-link">Work</a>
@@ -43,8 +43,11 @@
 
 .navbar-logo {
   text-decoration: none;
+}
+
+.navbar-logo h1 {
+  margin: 0;
   font-size: 1.5rem;
-  color: #fff;
 }
 
 .navbar-menu {
@@ -58,7 +61,6 @@
 .navbar-link {
   text-decoration: none;
   font-size: 1rem;
-  color: #fff;
 }
 
 .navbar-link:hover {
