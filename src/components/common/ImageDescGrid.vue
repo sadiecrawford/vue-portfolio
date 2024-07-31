@@ -29,7 +29,7 @@ import { getMediaUrl } from '@utils/mediaUtils'
 const props = defineProps<{
   // src url, alt, description
   imageData: [string, string, string][]
-  splitIndex: -1
+  splitIndex: -1 | number
 }>()
 
 const calcSplitIndex =
